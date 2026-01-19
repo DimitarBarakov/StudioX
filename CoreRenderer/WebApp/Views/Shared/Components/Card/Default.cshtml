@@ -1,0 +1,18 @@
+@using ViewComponents.Card;
+@using WebApp.ViewModels.Card
+
+@model CardViewModel
+
+<div class="card">
+     @if (Model.Image != null)
+    {
+        <img src="@Model.Image.Url"
+             alt="@Model.Image.AlternativeText"
+             class="card-img-top" />
+    }
+
+    <div class="card-body">
+        <h5 class="card-title">@Model.CardTitle</h5>
+        <p class="card-text">@Model.CardText</p>
+    </div>
+</div>

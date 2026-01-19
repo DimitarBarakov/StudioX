@@ -1,0 +1,24 @@
+﻿@using Progress.Sitefinity.AspNetCore.TagHelpers;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+@using WebApp.ViewModels
+
+@model ExtendedNavigationViewModel
+
+
+<div class="navigation-widget footer-nav">
+
+    @if (!string.IsNullOrWhiteSpace(Model.NavigationTitle))
+    {
+        <h2 class="text-light">@Model.NavigationTitle</h2>
+    }
+
+    <ul class="nav flex-column ">
+        @foreach (var node in Model.Nodes)
+        {
+            <li class="nav-item ">
+                <a class="nav-link sf-link" style="color: @(Model.DefaultColor)" href="@node.Url">@node.Title</a>
+            </li>
+        }
+    </ul>
+
+</div>

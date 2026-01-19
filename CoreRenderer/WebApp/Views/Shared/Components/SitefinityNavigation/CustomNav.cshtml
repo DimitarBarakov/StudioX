@@ -1,0 +1,18 @@
+﻿@using Progress.Sitefinity.AspNetCore.TagHelpers;
+@using Progress.Sitefinity.AspNetCore.Widgets.Models.Navigation;
+@using WebApp.ViewModels
+
+@* @model Progress.Sitefinity.AspNetCore.Widgets.Models.Navigation.NavigationViewModel
+ *@
+@model ExtendedNavigationViewModel
+
+<ul class="navbar-nav flex-row">
+    @foreach (var node in Model.Nodes)
+    {
+        <li class="nav-item me-3">
+            <a class="nav-link sf-link" style="color: @(Model.DefaultColor)" href="#">@node.Title</a>
+        </li>
+    }
+
+</ul>
+
