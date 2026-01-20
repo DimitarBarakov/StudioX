@@ -1,0 +1,16 @@
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using ViewComponents.StaticSection;
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section style="border-radius: 20px; background-color: @Model.BackgroudColor" class="row">
+    <div class="col" data-sfcontainer="Column1" container-context="@this.Model.Context.ContainerContext("Column1", "Column 1")">
+    </div>
+    <div class="col" data-sfcontainer="Column2" container-context="@this.Model.Context.ContainerContext("Column2", "Column 2")">
+    </div>
+    <div class="col" data-sfcontainer="Column3" container-context="@this.Model.Context.ContainerContext("Column3", "Column 3")">
+    </div>
+    <div class="col" data-sfcontainer="Column4" container-context="@this.Model.Context.ContainerContext("Column4", "Column 4")">
+    </div>
+</section>

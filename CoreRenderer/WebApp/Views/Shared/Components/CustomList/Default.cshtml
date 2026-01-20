@@ -1,0 +1,41 @@
+@using ViewComponents.CustomList;
+@using WebApp.ViewModels.CustomList
+
+@model CustomListViewModel
+<div class="list-bg text-@Model.TextAlign @Model.Margin">
+
+    @* Title *@
+    @if (!string.IsNullOrWhiteSpace(Model.Title))
+    {
+        <h2 style="margin-bottom:30px">
+            @Model.Title
+        </h2>
+    }
+
+    @* List *@
+    @if (Model.Items?.Any() == true)
+    {
+        <ul>
+            @foreach (var item in Model.Items)
+            {
+                if (!string.IsNullOrWhiteSpace(item))
+                {
+                    <li class="list-item">
+                        @item
+                    </li>
+                }
+            }
+        </ul>
+    }
+
+    @* Button *@
+    @if (!string.IsNullOrWhiteSpace(Model.LinkText) &&
+        !string.IsNullOrWhiteSpace(Model.Link.ToString()))
+    {
+        <button href="@Model.Link"
+           class="btn btn-primary rounded-pill">
+            @Model.LinkText
+        </button>
+    }
+
+</div>

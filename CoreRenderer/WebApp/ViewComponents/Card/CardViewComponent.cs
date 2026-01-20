@@ -1,13 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using Progress.Sitefinity.AspNetCore.RestSdk;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
+using Progress.Sitefinity.AspNetCore.ViewComponents.AttributeConfigurator.Attributes;
 using Progress.Sitefinity.AspNetCore.Widgets.ViewComponents.Common;
 using Progress.Sitefinity.Renderer.Designers;
 using Progress.Sitefinity.Renderer.Designers.Attributes;
 using Progress.Sitefinity.Renderer.Entities.Content;
+using Progress.Sitefinity.Renderer.Models;
 using Progress.Sitefinity.RestSdk;
 using Progress.Sitefinity.RestSdk.Dto;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
@@ -49,19 +52,16 @@ namespace ViewComponents.Card
             await GetImageAsync(context, model);
             model.CardText = context.Entity.CardText;
             model.CardTitle = context.Entity.CardTitle;
+            model.LinkText = context.Entity.LinkText;
+            model.Link = context.Entity.Link;
+            model.CardSubtitle = context.Entity.CardSubtitle;
+            model.ViewName = context.Entity.ViewName;
+            
 
-            return this.View(model);
+            return this.View(model.ViewName, model);
         }
         private async Task GetImageAsync(IViewComponentContext<CardEntity> context, CardViewModel model)
         {
-            //if (context.Entity.Image.HasSelectedItems())
-            //{
-            //    var imageResult = await restClient.GetItems<ImageDto>(context.Entity.Image);
-            //    if (imageResult.Items.Count > 0)
-            //    {
-            //        model.Image = imageResult.Items[0];
-            //    }
-            //}
             var imageContext = context.Entity?.Image;
 
             if (imageContext == null || !imageContext.HasSelectedItems())
@@ -103,10 +103,27 @@ namespace ViewComponents.Card
         public string CardTitle { get; set; }
 
         [ContentSection(CardSectionName)]
+        [DisplayName("Card Subtitle")]
+        [Required]
+        public string CardSubtitle { get; set; }
+
+        [ContentSection(CardSectionName)]
         [DataType(customDataType: KnownFieldTypes.TextArea)]
         [DisplayName("Card Text")]
         [Required]
         public string CardText { get; set; }
         #endregion
+
+        #region Button Section
+        [Description("Page, Content Item, or Url")]
+        public LinkModel Link { get; set; }
+
+
+        [DisplayName("Link Text")]
+        public string LinkText { get; set; }
+        #endregion
+
+        [ViewSelector]
+        public string ViewName { get; set; }
     }
 }

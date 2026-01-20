@@ -1,0 +1,20 @@
+﻿@using WebApp.ViewModels.Card
+
+@model CardViewModel;
+<div class="left-sided-image-card d-flex align-items-center gap-3">
+    <div>
+        @if (Model.Image != null)
+        {
+            <img src="@Model.Image.Url"
+                 width="336"
+                 height="215"
+                 alt="@Model.Image.AlternativeText" />
+        }
+    </div>
+    <div style="padding-left: 30px">
+        <h3>@Model.CardTitle</h3>
+        <p>@Model.CardSubtitle.ToString().ToUpper()</p>
+        <p>@Model.CardText</p>
+        <button href="@Model.Link" class="btn btn-outline-primary rounded-pill">@Model.LinkText</button>
+    </div>
+</div>
