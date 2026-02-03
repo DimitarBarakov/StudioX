@@ -1,0 +1,10 @@
+@using ViewComponents.TextCard;
+@using WebApp.ViewModels.TextCard
+
+@model TextCardViewModel
+
+<h3 class="title title--black title--m">@Model.Title</h3>
+<div class="text">
+    <p>@Model.Text</p>
+</div>
+<a class="button button--primary" href="@Model.ButtonLink">@Model.ButtonText</a>

@@ -1,0 +1,41 @@
+@using ViewComponents.CustomForm;
+@using WebApp.ViewModels.CustomForm
+
+@model CustomFormViewModel
+
+<section class="newsletter mb-74">
+    <div class="wrapper">
+        <div class="newsletter__box">
+            <div class="newsletter__info">
+                <h3 class="title title--white title--m">@Model.Title</h3>
+                <div class="text">
+                    <p>
+                        @Model.Description
+                    </p>
+                </div>
+            </div>
+            <div class="newsletter__wrap">
+                <form action="">
+                    <!-- add class has-error for error -->
+                    <div class="form__group">
+                        <label for="email-newsletter123" class="form__label visuallyhidden">email newsletter</label>
+                        <div class="form__group-block">
+                            <input id="email-newsletter123" name="email-newsletter123" type="email" class="form__control" placeholder="@Model.Placeholder">
+
+                            <button class="button button--green">@Model.ButtonText</button>
+                        </div>
+                        <!-- for error -->
+                        <!-- <div class="send send--error">
+                          <svg class="icon icon--20">
+                              <use xlink:href="./web/images/icons/symbol-defs.svg#icon-error_circle_rounded-white"></use>
+                          </svg>
+                          <span class="send__text" id="validationServer03Feedback555">
+                            Something went wrong, please try again.
+                          </span>
+                        </div> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

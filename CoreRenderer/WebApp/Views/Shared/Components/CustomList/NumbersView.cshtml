@@ -1,0 +1,35 @@
+﻿@using WebApp.ViewModels.CustomList
+@model CustomListViewModel
+
+
+
+<section class="numbers mb-127 ">
+    <div class="wrapper">
+        <ul class="numbers__list">
+            @foreach(var item in Model.Items)
+            {
+                <li class="numbers__item">
+                    <span class="numbers__numbers">@item.ItemTitle</span>
+                    <span class="numbers__text">@item.ItemText</span>
+                </li>
+            }
+            
+
+            @* <li class="numbers__item">
+                <span class="numbers__numbers">500+</span>
+                <span class="numbers__text">cities and towns where you can use your MultiSport</span>
+            </li>
+
+            <li class="numbers__item">
+                <span class="numbers__numbers">190 000+</span>
+                <span class="numbers__text">of employees moves and relaxes with MultiSport</span>
+            </li>
+
+            <li class="numbers__item">
+                <span class="numbers__numbers">5 800+</span>
+                <span class="numbers__text">companies that work with us</span>
+            </li> *@
+
+        </ul>
+    </div>
+</section>

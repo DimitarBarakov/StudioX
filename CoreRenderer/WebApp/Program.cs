@@ -8,8 +8,13 @@ using Progress.Sitefinity.AspNetCore.FormWidgets;
 using Progress.Sitefinity.AspNetCore.FormWidgets.Models.ContentBlock;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
 using Progress.Sitefinity.AspNetCore.Widgets.Models.Navigation;
+using Progress.Sitefinity.AspNetCore.Widgets.Models.Section;
+using ViewComponents.StaticSection;
 using WebApp.Entities;
+using WebApp.Entities.ExtendedSection;
 using WebApp.Models;
+using WebApp.Models.ExtendedSection;
+using WebApp.Models.StaticSection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +24,7 @@ builder.Services.AddViewComponentModels();
 builder.Services.AddFormViewComponentModels();
 builder.Services.AddScoped<INavigationModel, ExtendedNavigationModel>();
 builder.Services.AddSingleton<IEntityExtender, EntityExtender<NavigationEntity, ExtendedNavigationEntity>>();
+
 
 var app = builder.Build();
 

@@ -1,0 +1,15 @@
+﻿@using WebApp.ViewModels.CustomList
+
+
+@model CustomListViewModel
+<ul class="mobile-app__list">
+
+    @foreach(var item in Model.Items)
+    {
+        <li class="mobile-app__item">
+            <span class="mobile-app__item-text">
+               @item.ItemText
+            </span>
+        </li>
+    }
+</ul>

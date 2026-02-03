@@ -1,0 +1,12 @@
+﻿@using ViewComponents.CustomImage;
+@using WebApp.ViewModels
+
+@model CustomImageViewModel
+@if (Model.Image != null)
+{
+    <a class="main-footer__media-link main-footer__media-link--picture" href="/">
+        <picture class="aspect-ratio" style="--aspect-ratio: 180/52; --width: 180px">
+            <img width="180" height="52" src="@Model.Image.Url" srcset="@Model.Image.Url" loading="lazy" alt="picture">
+        </picture>
+    </a>
+}

@@ -1,7 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
 using Progress.Sitefinity.AspNetCore.ViewComponents.AttributeConfigurator.Attributes;
+using Progress.Sitefinity.AspNetCore.Widgets.Models.Common;
+using Progress.Sitefinity.AspNetCore.Widgets.Models.Section;
+using Progress.Sitefinity.AspNetCore.Widgets.ViewComponents.Common;
+using Progress.Sitefinity.RestSdk;
 using System;
+using ViewComponents.CustomList;
+using WebApp.Models.StaticSection;
+using WebApp.ViewModels.CustomList;
 using WebApp.ViewModels.StaticSection;
 
 namespace ViewComponents.StaticSection
@@ -13,6 +20,13 @@ namespace ViewComponents.StaticSection
     [SitefinityWidget]
     public class StaticSectionViewComponent : ViewComponent
     {
+        private IStyleClassesProvider styles;
+        private IRestClient service;
+        public StaticSectionViewComponent(IStyleClassesProvider styleClassesProvider, IRestClient service)
+        {
+            styles = styleClassesProvider;
+            this.service = service;
+        }
         /// <summary>
         /// Invokes the view.
         /// </summary>
@@ -23,15 +37,39 @@ namespace ViewComponents.StaticSection
             if (context == null)
                 throw new ArgumentNullException(nameof(context));
 
+            foreach (var child in context.ChildComponents)
+            {
+                child.Properties.Add("FromParent", "Val from parent");
+            }
 
             var viewModel = new StaticSectionViewModel()
             {
-                Context = context,
-                BackgroudColor = context.Entity.BackgroundColor
+                Context = context
             };
 
-            return this.View(context.Entity.ViewType, viewModel);
+            return this.View(context.Entity.ViewType ?? "Container", viewModel);
         }
+        //private void BuildSectionMargins(IViewComponentContext<StaticSectionEntity> context, StaticSectionViewModel model)
+        //{
+        //    switch (context.Entity.TextAlignment)
+        //    {
+        //        case TextAlignment.Center:
+        //            model.TextAlign = "center";
+        //            break;
+        //        case TextAlignment.Right:
+        //            model.TextAlign = "end";
+        //            break;
+        //        case TextAlignment.Left:
+        //        default:
+        //            model.TextAlign = "start";
+        //            break;
+        //    }
+        //    var margins = this.styles.GetMarginsClasses(context.Entity.Margin);
+        //    if (!string.IsNullOrEmpty(margins))
+        //    {
+        //        model.Margin = margins;
+        //    }
+        //}
     }
 
     /// <summary>
@@ -40,13 +78,7 @@ namespace ViewComponents.StaticSection
     /// </summary>
     public class StaticSectionEntity
     {
-        /// <summary>
-        /// Gets or sets a value indicating whether a boolean property is true or false.
-        /// </summary>
         [ViewSelector("StaticSection")]
         public string ViewType { get; set; }
-
-        [ColorPalette("Default")]
-        public string BackgroundColor { get; set; }
     }
 }

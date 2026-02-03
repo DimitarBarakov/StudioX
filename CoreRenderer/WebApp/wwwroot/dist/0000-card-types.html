@@ -1,0 +1,616 @@
+<!doctype html>
+<html prefix="og: https://ogp.me/ns#" lang="bg">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Site Name">
+  <meta name="keywords" content="Site Name">
+  <meta name="author" content="Site Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>0000 - Card types</title>
+
+  <!-- og tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:title" content="Site Name" />
+  <meta property="og:description" content="Site Name" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+
+  <!-- twitter tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:creator" content="" />
+
+  <!-- favicons -->
+
+  <link rel="shortcut icon" href="web/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="web/css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" media='screen and (min-width: 1023px)' href="web/css/main-desktop.css"> -->
+
+  <script>
+    //detect browser
+    const ua = navigator.userAgent
+    let tem,
+      M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
+    let browserName, browserVersion
+    if (/trident/i.test(M[1])) {
+      tem = /\brv[ :]+(\d+)/g.exec(ua) || []
+      browserName = 'IE'
+      browserVersion = tem[1] || ''
+    } else {
+      if (M[1] === 'Chrome') {
+        tem = ua.match(/\bOPR|Edge\/(\d+)/)
+        if (tem !== null) {
+          browserName = 'Opera'
+          browserVersion = tem[1]
+        }
+      }
+      M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?']
+      if ((tem = ua.match(/version\/(\d+)/i)) !== null) {
+        M.splice(1, 1, tem[1])
+      }
+      browserName = M[0]
+      browserVersion = M[1]
+    }
+    const shouldDisplayMessage =
+      /Trident\/|MSIE/.test(window.navigator.userAgent) ||
+      (browserName === 'Chrome' && +browserVersion < 98) ||
+      (browserName === 'Safari' && +browserVersion < 15) ||
+      (browserName === 'Firefox' && +browserVersion < 98)
+    if (shouldDisplayMessage) {
+      window.addEventListener('DOMContentLoaded', () => {
+        const template = `<div class="upgrade-browser">
+                    <a href="https://www.microsoft.com/en-us/edge" class="ie" target="_blank" rel="noopener noreferrer">Microsoft Edge</a>
+                    <a href="http://www.getfirefox.com" class="firefox" target="_blank" rel="noopener noreferrer">Firefox</a>
+                    <a href="http://www.google.com/chrome" class="chrome" target="_blank" rel="noopener noreferrer">Chrome</a>
+                    <a href="https://support.apple.com/downloads/safari" class="safari" target="_blank" rel="noopener noreferrer">Safari</a>
+                    <span>За по-добро качество и функционалност на сайта, моля обновете вашия браузър или изтеглете нов.</span>
+                    <button type="button" class="upgrade-browser__close js-close-upgrade-browser"></button>
+                </div>`
+        document.body.insertAdjacentHTML('afterbegin', template)
+        document.querySelector('.js-close-upgrade-browser').addEventListener('click', () => {
+          document.querySelector('.upgrade-browser').remove()
+        })
+      })
+    }
+    // javascript is enabled
+    document.documentElement.classList.remove('no-js');
+    // backend path
+    var _root = '/';
+    var _public = 'web/';
+    var xhr_url = '/bg/application/xhr';
+    // detect touch screen
+    touchDetect = function() {
+      return 'ontouchstart' in window || navigator.maxTouchPoints;
+    };
+    if (touchDetect() == true) {
+      document.documentElement.classList.remove('non-touch');
+      document.documentElement.classList.add('touch');
+    } else {
+      document.documentElement.classList.add('non-touch');
+      document.documentElement.classList.remove('touch');
+    }
+  </script>
+
+  <!-- Google Tag Manager  -->
+  <!-- GTM-XXXX - ID -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-XXXX');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="web/js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- GTM-XXXX - id -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="site js-space-top">
+
+    <header class="main-header js-header" data-id="lciwjevo;ow">
+      <div class="wrapper wrapper--1250">
+        <div class="main-header__logo">
+          <a href="#">
+            <span class="visuallyhidden">MultiSport logo</span>
+            <svg width="148" height="31" viewbox="0 0 148 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_2833_3611)">
+                <path class="logo-circle" d="M7 11.0522C6.98121 11.3082 7.01549 11.5653 7.1007 11.8074C7.18591 12.0496 7.32022 12.2716 7.49524 12.4596C7.67026 12.6476 7.88223 12.7976 8.11791 12.9001C8.35358 13.0027 8.60791 13.0556 8.865 13.0556C9.12208 13.0556 9.37641 13.0027 9.61208 12.9001C9.84776 12.7976 10.0597 12.6476 10.2347 12.4596C10.4098 12.2716 10.5441 12.0496 10.6293 11.8074C10.7145 11.5653 10.7488 11.3082 10.73 11.0522V6.59937C10.7488 6.34339 10.7145 6.08628 10.6293 5.84412C10.5441 5.60196 10.4098 5.37994 10.2347 5.19193C10.0597 5.00392 9.84776 4.85396 9.61208 4.75142C9.37641 4.64887 9.12208 4.59595 8.865 4.59595C8.60791 4.59595 8.35358 4.64887 8.11791 4.75142C7.88223 4.85396 7.67026 5.00392 7.49524 5.19193C7.32022 5.37994 7.18591 5.60196 7.1007 5.84412C7.01549 6.08628 6.98121 6.34339 7 6.59937V11.0522Z" fill="#3642AE" />
+                <path class="logo-circle" d="M8.84 17.6515C10.5884 17.6515 12.2975 17.1339 13.7512 16.1641C15.205 15.1943 16.338 13.8159 17.0071 12.2032C17.6762 10.5905 17.8512 8.81598 17.5101 7.10395C17.169 5.39192 16.3271 3.81932 15.0908 2.58501C13.8545 1.35071 12.2794 0.510133 10.5646 0.169589C8.84981 -0.170956 7.07238 0.00382409 5.45708 0.671825C3.84178 1.33983 2.46116 2.47105 1.48981 3.92244C0.518457 5.37383 0 7.0802 0 8.82577C0 11.1665 0.931354 13.4114 2.58918 15.0665C4.247 16.7217 6.49549 17.6515 8.84 17.6515ZM8.84 2.93527C10.0069 2.93527 11.1476 3.28074 12.1179 3.928C13.0881 4.57525 13.8443 5.49522 14.2909 6.57157C14.7374 7.64792 14.8543 8.8323 14.6266 9.97495C14.399 11.1176 13.8371 12.1672 13.0119 12.991C12.1868 13.8148 11.1355 14.3758 9.99103 14.6031C8.84654 14.8304 7.66025 14.7137 6.58217 14.2679C5.50408 13.822 4.58263 13.067 3.93433 12.0984C3.28603 11.1297 2.94 9.9908 2.94 8.82577C2.94 7.26351 3.56161 5.76524 4.66807 4.66056C5.77453 3.55587 7.27522 2.93527 8.84 2.93527Z" fill="#3642AE" />
+                <path d="M76.48 9.295C76.6007 8.63103 76.9492 8.02972 77.4656 7.59431C77.982 7.1589 78.6341 6.91655 79.31 6.90885C79.6266 6.90705 79.94 6.97168 80.23 7.09854C80.4961 7.20842 80.7325 7.37945 80.92 7.59774C81.1105 7.8096 81.2415 8.06789 81.3 8.34653C81.3778 8.67479 81.3778 9.01666 81.3 9.34492C81.247 9.67011 81.1316 9.98201 80.96 10.2634C80.6064 10.8434 80.0726 11.2922 79.44 11.5414C79.1231 11.6719 78.7828 11.7364 78.44 11.7311C78.1228 11.7391 77.808 11.6742 77.52 11.5414C77.2586 11.4237 77.029 11.2458 76.85 11.0222C76.664 10.8021 76.5306 10.5426 76.46 10.2634C76.3885 9.96143 76.3885 9.64693 76.46 9.34492" fill="black" />
+                <path d="M19.36 26.5671L22.48 8.85571H28.44L30.71 20.6966L37.37 8.85571H43L39.87 26.5671H35.5L37.62 14.6064L31.34 26.5671H28.02L25.84 14.6064L23.72 26.5671H19.36Z" fill="black" />
+                <path d="M43.2 21.1759L44.59 13.2886H48.81L47.61 20.0976C47.4283 20.8641 47.463 21.6658 47.71 22.4139C47.94 23.0129 48.49 23.3124 49.38 23.3124C49.7759 23.328 50.1702 23.2544 50.5337 23.0972C50.8972 22.9399 51.2206 22.7029 51.48 22.4039C52.0446 21.7008 52.4106 20.8597 52.54 19.9678L53.71 13.3085H57.94L55.59 26.5871H51.37L51.71 24.6902C51.2025 25.4076 50.5119 25.9764 49.71 26.3375C48.8328 26.7414 47.8758 26.9427 46.91 26.9266C46.1526 26.9639 45.3975 26.8166 44.71 26.4973C44.1783 26.2275 43.7348 25.8116 43.4319 25.2987C43.1289 24.7857 42.9791 24.1971 43 23.6019C43.0036 22.7875 43.0839 21.9752 43.24 21.1759" fill="black" />
+                <path d="M58.06 26.5671L61.18 8.85571H65.4L62.27 26.5671H58.06Z" fill="black" />
+                <path d="M66.94 13.2886L67.72 8.85571H71.94L71.16 13.2886H74.16L73.6 16.4235H70.6L69.77 21.1459C69.6874 21.5295 69.6638 21.9233 69.7 22.314C69.7397 22.5533 69.8434 22.7775 70 22.963C70.1462 23.1283 70.3431 23.2406 70.56 23.2824C70.8208 23.3287 71.0852 23.352 71.35 23.3523C71.53 23.3523 71.76 23.3523 72.04 23.3523C72.32 23.3523 72.56 23.3523 72.78 23.2824L72.2 26.5472C71.88 26.6071 71.48 26.647 71 26.7069C70.52 26.7668 70 26.7568 69.32 26.7568C68.8017 26.757 68.284 26.7237 67.77 26.657C67.2539 26.5933 66.7622 26.4011 66.34 26.0979C65.8936 25.738 65.5746 25.2446 65.43 24.6902C65.2267 23.8334 65.2267 22.9411 65.43 22.0844L66.43 16.4035L66.94 13.2886Z" fill="black" />
+                <path d="M73.78 26.5672L76.13 13.2886H80.35L78 26.5672H73.78Z" fill="black" />
+                <path d="M95.07 31L98.21 13.2886H102.42L102.09 15.1855C102.6 14.5231 103.253 13.984 104 13.6081C104.862 13.1555 105.826 12.9288 106.8 12.9491C107.621 12.9416 108.433 13.1263 109.17 13.4883C109.85 13.8455 110.439 14.3546 110.89 14.9759C111.391 15.6274 111.733 16.3861 111.89 17.1923C112.065 18.1025 112.065 19.0376 111.89 19.9478C111.721 20.9242 111.383 21.8635 110.89 22.7234C110.438 23.5485 109.854 24.2939 109.16 24.9298C108.496 25.5444 107.732 26.0408 106.9 26.3974C106.09 26.7523 105.215 26.9359 104.33 26.9366C103.431 26.9797 102.541 26.7462 101.78 26.2677C101.175 25.9068 100.707 25.3554 100.45 24.7002L99.32 31.03L95.07 31ZM101.25 19.9678C101.165 20.403 101.165 20.8505 101.25 21.2857C101.32 21.6719 101.478 22.0372 101.71 22.354C101.939 22.6611 102.237 22.9106 102.58 23.0828C102.967 23.2778 103.397 23.3738 103.83 23.3623C104.292 23.3661 104.749 23.2708 105.17 23.0828C105.585 22.9053 105.967 22.6589 106.3 22.354C106.638 22.0498 106.919 21.6881 107.13 21.2857C107.367 20.8794 107.527 20.4324 107.6 19.9678C107.685 19.536 107.685 19.0918 107.6 18.6599C107.529 18.2722 107.368 17.9064 107.13 17.5916C106.909 17.2803 106.614 17.0296 106.27 16.8628C105.881 16.6747 105.452 16.5823 105.02 16.5933C104.56 16.5911 104.104 16.6828 103.68 16.8628C103.266 17.0425 102.884 17.2887 102.55 17.5916C102.214 17.9002 101.93 18.2609 101.71 18.6599C101.483 19.0674 101.324 19.5092 101.24 19.9678" fill="black" />
+                <path d="M113.27 19.9678C113.441 19.0205 113.78 18.1112 114.27 17.2821C114.743 16.4117 115.366 15.6311 116.11 14.9759C116.881 14.327 117.757 13.8139 118.7 13.4583C119.718 13.0708 120.8 12.8778 121.89 12.8892C122.919 12.8666 123.941 13.0605 124.89 13.4583C125.705 13.7871 126.429 14.3077 127 14.9759C127.51 15.637 127.853 16.4109 128 17.2322C128.17 18.1194 128.17 19.0308 128 19.9179C127.829 20.8715 127.49 21.7874 127 22.6235C126.52 23.4663 125.898 24.2196 125.16 24.8499C124.388 25.5025 123.508 26.016 122.56 26.3675C121.531 26.755 120.439 26.948 119.34 26.9366C118.311 26.9611 117.288 26.7671 116.34 26.3675C115.565 26.0231 114.88 25.5036 114.34 24.8499C113.813 24.202 113.446 23.4393 113.27 22.6235C113.093 21.7303 113.093 20.8112 113.27 19.9179M117.49 19.9179C117.41 20.3603 117.41 20.8134 117.49 21.2557C117.553 21.6469 117.703 22.0189 117.93 22.344C118.15 22.6581 118.446 22.9121 118.79 23.0828C119.182 23.2616 119.609 23.3503 120.04 23.3424C120.506 23.3421 120.967 23.254 121.4 23.0828C121.821 22.9069 122.208 22.6567 122.54 22.344C122.874 22.0297 123.157 21.6661 123.38 21.2657C123.61 20.8455 123.769 20.3901 123.85 19.9179C123.94 19.4832 123.94 19.0347 123.85 18.6C123.771 18.2132 123.615 17.8464 123.39 17.5218C123.166 17.21 122.866 16.9595 122.52 16.7929C122.12 16.6059 121.682 16.5137 121.24 16.5234C120.78 16.5212 120.324 16.6129 119.9 16.7929C119.486 16.9679 119.107 17.2146 118.78 17.5218C118.452 17.839 118.173 18.2023 117.95 18.6C117.732 19.0132 117.58 19.4579 117.5 19.9179" fill="black" />
+                <path d="M140.76 13.2886L141.54 8.85571H145.76L145 13.2886H148L147.45 16.4235H144.45L143.61 21.1459C143.527 21.5295 143.504 21.9233 143.54 22.314C143.561 22.5633 143.651 22.8018 143.8 23.0029C143.943 23.1727 144.141 23.286 144.36 23.3224C144.617 23.3686 144.878 23.392 145.14 23.3923C145.32 23.3923 145.56 23.3923 145.83 23.3923C146.078 23.3822 146.325 23.3589 146.57 23.3224L146 26.5671C145.67 26.6271 145.27 26.667 144.79 26.7269C144.31 26.7868 143.79 26.7768 143.12 26.7768C142.598 26.7771 142.077 26.7438 141.56 26.677C141.047 26.6134 140.558 26.421 140.14 26.1179C139.69 25.759 139.368 25.2656 139.22 24.7101C139.027 23.8523 139.027 22.9622 139.22 22.1043L140.22 16.4235L140.76 13.2886Z" fill="black" />
+                <path d="M95.88 11.801C95.7351 11.1342 95.4335 10.5114 95 9.98391C94.51 9.41698 93.8887 8.97826 93.19 8.70597C92.3257 8.37568 91.4053 8.21631 90.48 8.23673C89.6448 8.22455 88.8115 8.31849 88 8.51627C87.2065 8.72372 86.453 9.0611 85.77 9.51466C85.0795 9.94109 84.4784 10.4971 84 11.152C83.4964 11.8577 83.155 12.6656 83 13.5182C82.8309 14.267 82.8724 15.0479 83.12 15.7746C83.3531 16.3786 83.7349 16.9142 84.23 17.3321C84.7593 17.7853 85.3523 18.1587 85.99 18.4403C86.65 18.7398 87.36 19.0293 88.09 19.3189L89.09 19.7482C89.3598 19.8706 89.612 20.0284 89.84 20.2174C90.0225 20.3695 90.1636 20.5653 90.25 20.7865C90.3231 21.0443 90.3231 21.3174 90.25 21.5752C90.2321 21.8415 90.161 22.1015 90.0408 22.3399C89.9205 22.5782 89.7537 22.7901 89.55 22.963C89.0742 23.3069 88.4971 23.4826 87.91 23.4622C87.5877 23.483 87.265 23.4279 86.968 23.3013C86.6709 23.1747 86.4078 22.9802 86.2 22.7333C85.9913 22.4385 85.85 22.1014 85.786 21.7461C85.7221 21.3907 85.7371 21.0256 85.83 20.6767H81.33C81.1324 21.5846 81.1324 22.5243 81.33 23.4322C81.519 24.1768 81.8901 24.8628 82.41 25.429C82.9664 26.0019 83.6522 26.4333 84.41 26.687C85.2811 26.9876 86.1984 27.1329 87.12 27.1163C88.0475 27.1207 88.9706 26.9895 89.86 26.7269C90.6981 26.4803 91.489 26.0957 92.2 25.5887C92.9115 25.1003 93.5226 24.48 94 23.7617C94.4926 23.0316 94.8327 22.2099 95 21.3456C95.1414 20.5474 95.0619 19.7258 94.77 18.9694C94.5153 18.3419 94.1101 17.7865 93.59 17.352C93.0285 16.8951 92.4058 16.5188 91.74 16.2338C91.05 15.9443 90.33 15.6448 89.61 15.3852C89.0259 15.1795 88.4814 14.8756 88 14.4866C87.8389 14.3347 87.7207 14.143 87.6575 13.9309C87.5943 13.7188 87.5883 13.4938 87.64 13.2786C87.6745 13.0445 87.7594 12.8206 87.8889 12.6224C88.0183 12.4242 88.1893 12.2563 88.39 12.1304C88.817 11.8589 89.3137 11.7167 89.82 11.7211C90.0809 11.6926 90.3447 11.7329 90.5851 11.838C90.8255 11.9431 91.0341 12.1094 91.19 12.3201C91.4637 12.8281 91.5283 13.4227 91.37 13.9775H95.9C96.0504 13.2496 96.0504 12.4988 95.9 11.771" fill="black" />
+                <path d="M139.15 13.059C138.205 13.052 137.275 13.3004 136.46 13.7778C135.728 14.1908 135.096 14.7601 134.61 15.4451L134.99 13.2886H130.77L128.42 26.5672H132.65L133.56 21.3856C133.696 20.0885 134.283 18.8802 135.22 17.9711C136.069 17.2917 137.133 16.9375 138.22 16.9727C138.41 16.9727 138.58 16.9727 138.74 16.9727L139.41 13.0989H139.13" fill="black" />
+              </g>
+              <defs>
+                <clipPath id="clip0_2833_3611">
+                  <rect width="148" height="31" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div class="main-header__burger-menu burger">
+          <button type="button" class="burger__btn js-sandwitch" aria-label="button open menu">
+            <span class="visuallyhidden">button open menu</span>
+            <span class="burger__span menu1"></span>
+            <span class="burger__span menu2"></span>
+            <span class="burger__span menu3"></span>
+          </button>
+        </div>
+        <nav class="main-header__nav nav">
+          <ul class="nav__list">
+
+            <li class="nav__item  is-active ">
+              <a class="nav__link  is-active " href="#">
+                <span class="nav__link-text" data-text="For Companies">For Companies</span>
+              </a>
+            </li>
+
+            <li class="nav__item ">
+              <a class="nav__link " href="#">
+                <span class="nav__link-text" data-text="For Partners">For Partners</span>
+              </a>
+            </li>
+
+            <li class="nav__item ">
+              <a class="nav__link " href="#">
+                <span class="nav__link-text" data-text="Careers">Careers</span>
+              </a>
+            </li>
+
+            <li class="nav__item ">
+              <a class="nav__link " href="#">
+                <span class="nav__link-text" data-text="Facilities">Facilities</span>
+              </a>
+            </li>
+
+            <li class="nav__item ">
+              <a class="nav__link " href="#">
+                <span class="nav__link-text" data-text="My MultiSport">My MultiSport</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <div class="main-header__button">
+            <a href="#" class="button button--uncolor">
+              Get an offer
+            </a>
+          </div>
+          <div class="main-header__language">
+            <span class="main-header__language-burger">Language:</span>
+            <a class="main-header__language-link" href="#">
+              BG
+            </a>
+            <a class="main-header__language-link active" href="#">
+              EN
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+      <section class="card-types">
+        <div class="wrapper wrapper--xl">
+
+          <section class="info mt-0">
+            <div class="wrapper">
+              <h1 class="title title--black title--l">Our products</h1>
+              <p class="info__text">We offer 3 types of MultiSport cards. Here you can compare them. Longer text about what we would do after contact form is send.</p>
+            </div>
+          </section>
+
+          <div class="wrapper">
+            <ul class="card-types__list">
+
+              <li class="card-types__item">
+                <div class="card-types__box">
+                  <div class="card-types__top">
+                    <div class="card-types__wrap-img">
+                      <picture class="aspect-ratio" style="--aspect-ratio: 65/41; ">
+                        <!-- size 65/41 -->
+                        <img width="65" height="41" src="temp-files/photo_12.png" loading="lazy" alt="picture">
+                      </picture>
+                    </div>
+                    <span class="card-types__subtitle">MultiSport</span>
+                  </div>
+                  <ul class="card-types__small-list">
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      more than 87 999 facilities
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      entry once a day
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      for adults
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/close-x.svg" alt="icon">
+                      </span>
+
+                      for kids
+                    </li>
+
+                  </ul>
+                  <a class="button button--uncolor" href="#">See facilities with MultiSport</a>
+                </div>
+              </li>
+
+              <li class="card-types__item">
+                <div class="card-types__box">
+                  <div class="card-types__top">
+                    <div class="card-types__wrap-img">
+                      <picture class="aspect-ratio" style="--aspect-ratio: 65/41; ">
+                        <!-- size 65/41 -->
+                        <img width="65" height="41" src="temp-files/photo_13.png" loading="lazy" alt="picture">
+                      </picture>
+                    </div>
+                    <span class="card-types__subtitle">MultiSport LITE</span>
+                  </div>
+                  <ul class="card-types__small-list">
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      more than 87 999 facilities
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      3 entries in a week
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      for adults
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/close-x.svg" alt="icon">
+                      </span>
+
+                      for kids
+                    </li>
+
+                  </ul>
+                  <a class="button button--uncolor" href="#">See facilities with MultiSport LITE</a>
+                </div>
+              </li>
+
+              <li class="card-types__item">
+                <div class="card-types__box">
+                  <div class="card-types__top">
+                    <div class="card-types__wrap-img">
+                      <picture class="aspect-ratio" style="--aspect-ratio: 65/41; ">
+                        <!-- size 65/41 -->
+                        <img width="65" height="41" src="temp-files/photo_11.png" loading="lazy" alt="picture">
+                      </picture>
+                    </div>
+                    <span class="card-types__subtitle">MultiSport KIDS</span>
+                  </div>
+                  <ul class="card-types__small-list">
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      more than 24 667 facilities
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      5 entries in a week
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/close-x.svg" alt="icon">
+                      </span>
+
+                      for adults
+                    </li>
+
+                    <li class="card-types__small-item">
+                      <span class="icon icon--24">
+
+                        <img width="24" height="24" loading="lazy" src="web/images/check-green-small.svg" alt="icon">
+                      </span>
+
+                      for kids
+                    </li>
+
+                  </ul>
+                  <a class="button button--uncolor" href="#">See facilities with MultiSport KIDS</a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="strip strip--color mt-xl">
+        <div class="wrapper">
+          <div class="strip__wrapper">
+            <div class="strip__box">
+
+              <h2 class="title title--white title--ml">Want to join us?</h2>
+
+              <span class="strip__text">
+                Few words about what we can do for business to make their users feel satisfied from work. Longer text about what we would do after contact form is send.
+              </span>
+
+              <a class="button button--primary-white" href="#">Get an offer</a>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="wrapper">
+        <div class="main-footer__wrap">
+          <div class="main-footer__wrap-item">
+            <a class="main-footer__logo" href="#">
+              <picture class="aspect-ratio" style="--aspect-ratio: 148/31">
+                <img width="148" height="31" loading="lazy" src="web/images/logo-white.svg" alt="logo">
+              </picture>
+            </a>
+            <p class="main-footer__text">
+              Live actively with MultiSport. One card. Lots of opportunities.
+            </p>
+          </div>
+
+          <div class="main-footer__wrap-item main-footer__wrap-item--center">
+            <nav>
+              <ul class="main-footer__list ">
+                <li class="main-footer__item ">
+                  <h2 class="main-footer__title">About</h2>
+                  <ul class="main-footer__small-list">
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        About us
+                      </a>
+                    </li>
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        FAQ
+                      </a>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="main-footer__item ">
+                  <h2 class="main-footer__title">Collaborations</h2>
+                  <ul class="main-footer__small-list">
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        For Partners
+                      </a>
+                    </li>
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        For Clients
+                      </a>
+                    </li>
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        Card comparison
+                      </a>
+                    </li>
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        Landing 1
+                      </a>
+                    </li>
+
+                    <li class="main-footer__small-item">
+                      <a class="main-footer__small-link" href="#">
+                        Landing tops
+                      </a>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+          <div class="main-footer__wrap-item">
+            <div class="main-footer__item-contact">
+              <h2 class="main-footer__title">Contact us</h2>
+              <div class="main-footer__media">
+                <a class="main-footer__media-link" href="tel:+359879280284">
+                  <svg class="icon icon--16">
+                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-footer-call"></use>
+                  </svg>
+                  +359 879 280 284
+                </a>
+                <a class="main-footer__media-link" href="mailto:info@benefitsystems.bg">
+                  <svg class="icon icon--16">
+                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-footer-mail"></use>
+                  </svg>
+                  info@benefitsystems.bg
+                </a>
+                <a class="main-footer__media-link address" href="#">
+                  <svg class="icon icon--16">
+                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-footer-pin_drop"></use>
+                  </svg>
+                  <address>11-13 Yunak str., 1st fl., Sofia 1612</address>
+                </a>
+              </div>
+              <ul class="main-footer__social">
+
+                <li class="main-footer__social-item">
+                  <a class="main-footer__social-link" href="#">
+                    <span class="visuallyhidden">facebook</span>
+                    <img class="lazyload icon icon--24" width="24" height="24" loading="lazy" src="./web/images/fb.svg" alt="facebook">
+                  </a>
+                </li>
+
+                <li class="main-footer__social-item">
+                  <a class="main-footer__social-link" href="#">
+                    <span class="visuallyhidden">linkedin</span>
+                    <img class="lazyload icon icon--24" width="24" height="24" loading="lazy" src="./web/images/linkedin.svg" alt="linkedin">
+                  </a>
+                </li>
+
+                <li class="main-footer__social-item">
+                  <a class="main-footer__social-link" href="#">
+                    <span class="visuallyhidden">instagram</span>
+                    <img class="lazyload icon icon--24" width="24" height="24" loading="lazy" src="./web/images/instagram.svg" alt="instagram">
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <div class="main-footer__wrap-item">
+            <div class="main-footer__item-app">
+              <h2 class="main-footer__title">Download the app</h2>
+              <ul class="main-footer__small-list">
+                <li class="main-footer__small-item">
+                  <a class="main-footer__media-link main-footer__media-link--picture" href="/">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 180/52; --width: 180px">
+                      <!--  @1x - 180/52 / @2x - 360/104 -->
+                      <img width="180" height="52" src="temp-files/google_play.svg" srcset="temp-files/google_play.svg" loading="lazy" alt="picture">
+                    </picture>
+                  </a>
+                </li>
+                <li class="main-footer__small-item">
+                  <a class="main-footer__media-link main-footer__media-link--picture" href="/">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 180/52; --width: 180px">
+                      <!--  @1x - 180/52 / @2x - 360/104 -->
+                      <img width="180" height="52" src="temp-files/app_store.svg" srcset="temp-files/app_store.svg" loading="lazy" alt="picture">
+                    </picture>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__wrap-line">
+          <nav class="main-footer__bottom-nav">
+            <ul class="main-footer__bottom-list">
+
+              <li class="main-footer__small-item">
+                <a class="main-footer__small-link" href="#">
+                  Условия за ползване
+                </a>
+              </li>
+
+              <li class="main-footer__small-item">
+                <a class="main-footer__small-link" href="#">
+                  Политика за защита на личните данни
+                </a>
+              </li>
+
+              <li class="main-footer__small-item">
+                <a class="main-footer__small-link" href="#">
+                  Политика за бисквитки
+                </a>
+              </li>
+
+              <li class="main-footer__small-item">
+                <a class="main-footer__small-link" href="#">
+                  Подаване на сигнали по ЗЗЛПСПОИН
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <p class="main-footer__botton center">Benefit Systems | MultiSport 2022</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

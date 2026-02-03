@@ -1,0 +1,82 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section class="products mb-130">
+    <div class="wrapper">
+        <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Title", "Title")"> </div>
+        
+
+            <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Card1", "Card1")">
+                @* <div class="products__wrap-img">
+                    <div class="products__img">
+                        <picture class="aspect-ratio" style="--aspect-ratio: 336/215; ">
+                            <!-- size 336/215 -->
+                            <img width="336" height="215" src="temp-files/photo_12.png" loading="lazy" alt="picture">
+                        </picture>
+                    </div>
+
+                </div>
+                <!-- <div class="products__info"> -->
+                <div class="products__info-wrap">
+                    <h3 class="title title--black title--m">MultiSport</h3>
+                    <span class="products__subtitle">MAIN CARD</span>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id imperdiet risus. Mauris euismod elit eu lorem dignissim maximus. Aenean convallis augue sem.</p>
+                </div>
+                <a class="button button--uncolor" href="#">Read More</a> *@
+                <!-- </div> -->
+            </div>
+
+            <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Card2", "Card2")">
+                @* <div class="products__wrap-img">
+                    <div class="products__img">
+                        <picture class="aspect-ratio" style="--aspect-ratio: 336/215; ">
+                            <!-- size 336/215 -->
+                            <img width="336" height="215" src="temp-files/photo_13.png" loading="lazy" alt="picture">
+                        </picture>
+                    </div>
+
+                </div>
+                <!-- <div class="products__info"> -->
+                <div class="products__info-wrap">
+                    <h3 class="title title--black title--m">MultiSport LITE</h3>
+                    <span class="products__subtitle">ADDITIONAL CARD</span>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id imperdiet risus. Mauris euismod elit eu lorem dignissim maximus. Aenean convallis augue sem.</p>
+                </div>
+                <a class="button button--uncolor" href="#">Read More</a> *@
+                <!-- </div> -->
+            </div>
+
+            <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Card3", "Card3")">
+                @* <div class="products__wrap-img">
+                    <div class="products__img">
+                        <picture class="aspect-ratio" style="--aspect-ratio: 336/215; ">
+                            <!-- size 336/215 -->
+                            <img width="336" height="215" src="temp-files/photo_11.png" loading="lazy" alt="picture">
+                        </picture>
+                    </div>
+
+                </div>
+                <!-- <div class="products__info"> -->
+                <div class="products__info-wrap">
+                    <h3 class="title title--black title--m">MultiSport Kids</h3>
+                    <span class="products__subtitle">ADDITIONAL KIDS CARD</span>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id imperdiet risus. Mauris euismod elit eu lorem dignissim maximus. Aenean convallis augue sem.</p>
+                </div>
+                <a class="button button--uncolor" href="#">Read More</a> *@
+                <!-- </div> -->
+            </div>
+
+        
+    </div>
+</section>

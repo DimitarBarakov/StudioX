@@ -1,0 +1,13 @@
+﻿@using ViewComponents.CustomImage;
+@using WebApp.ViewModels
+
+@model CustomImageViewModel
+@if (Model.Image != null)
+{
+    <div class="mobile-app__wrap-img">
+        <picture class="aspect-ratio" style="--aspect-ratio: 1024/1061; --aspect-ratio-s: 640/700;">
+            <!-- size 1024/1061 -->
+            <img width="1024" height="1061" src="@Model.Image.Url" loading="lazy" alt="picture">
+        </picture>
+    </div>
+}

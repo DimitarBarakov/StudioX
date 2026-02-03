@@ -1,0 +1,245 @@
+<!doctype html>
+<html prefix="og: https://ogp.me/ns#" lang="bg">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Site Name">
+  <meta name="keywords" content="Site Name">
+  <meta name="author" content="Site Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no" />
+  <title>Project Index</title>
+
+  <!-- og tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:title" content="Site Name" />
+  <meta property="og:description" content="Site Name" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+
+  <!-- twitter tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:creator" content="" />
+
+  <!-- favicons -->
+
+  <link rel="shortcut icon" href="web/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+  </noscript>
+  <link rel="stylesheet" href="web/css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" media='screen and (min-width: 1023px)' href="web/css/main-desktop.css"> -->
+
+  <script>
+    //detect browser
+    const ua = navigator.userAgent
+    let tem,
+      M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
+    let browserName, browserVersion
+    if (/trident/i.test(M[1])) {
+      tem = /\brv[ :]+(\d+)/g.exec(ua) || []
+      browserName = 'IE'
+      browserVersion = tem[1] || ''
+    } else {
+      if (M[1] === 'Chrome') {
+        tem = ua.match(/\bOPR|Edge\/(\d+)/)
+        if (tem !== null) {
+          browserName = 'Opera'
+          browserVersion = tem[1]
+        }
+      }
+      M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?']
+      if ((tem = ua.match(/version\/(\d+)/i)) !== null) {
+        M.splice(1, 1, tem[1])
+      }
+      browserName = M[0]
+      browserVersion = M[1]
+    }
+    const shouldDisplayMessage =
+      /Trident\/|MSIE/.test(window.navigator.userAgent) ||
+      (browserName === 'Chrome' && +browserVersion < 98) ||
+      (browserName === 'Safari' && +browserVersion < 15) ||
+      (browserName === 'Firefox' && +browserVersion < 98)
+    if (shouldDisplayMessage) {
+      window.addEventListener('DOMContentLoaded', () => {
+        const template = `<div class="upgrade-browser">
+                    <a href="https://www.microsoft.com/en-us/edge" class="ie" target="_blank" rel="noopener noreferrer">Microsoft Edge</a>
+                    <a href="http://www.getfirefox.com" class="firefox" target="_blank" rel="noopener noreferrer">Firefox</a>
+                    <a href="http://www.google.com/chrome" class="chrome" target="_blank" rel="noopener noreferrer">Chrome</a>
+                    <a href="https://support.apple.com/downloads/safari" class="safari" target="_blank" rel="noopener noreferrer">Safari</a>
+                    <span>За по-добро качество и функционалност на сайта, моля обновете вашия браузър или изтеглете нов.</span>
+                    <button type="button" class="upgrade-browser__close js-close-upgrade-browser"></button>
+                </div>`
+        document.body.insertAdjacentHTML('afterbegin', template)
+        document.querySelector('.js-close-upgrade-browser').addEventListener('click', () => {
+          document.querySelector('.upgrade-browser').remove()
+        })
+      })
+    }
+    // javascript is enabled
+    document.documentElement.classList.remove('no-js');
+    // backend path
+    var _root = '/';
+    var _public = 'web/';
+    var xhr_url = '/bg/application/xhr';
+    // detect touch screen
+    touchDetect = function() {
+      return 'ontouchstart' in window || navigator.maxTouchPoints;
+    };
+    if (touchDetect() == true) {
+      document.documentElement.classList.remove('non-touch');
+      document.documentElement.classList.add('touch');
+    } else {
+      document.documentElement.classList.add('non-touch');
+      document.documentElement.classList.remove('touch');
+    }
+  </script>
+
+  <!-- Google Tag Manager  -->
+  <!-- GTM-XXXX - ID -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-XXXX');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="web/js/main.js" defer></script>
+</head>
+
+<body>
+
+  <div class="site">
+    <main class="main-content">
+
+      <div class="wrapper">
+        <h1 class="center">Multisport - Project Index</h1>
+        <nav class="index-nav">
+          <ul class="index-nav__list">
+
+            <li class="index-nav__list-item">
+              <a href="././0000-homepage.html" class="index-nav__list-link" title="0000 - Homepage">0000 - Homepage</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-landing-page.html" class="index-nav__list-link" title="0000 - Landing Page">0000 - Landing Page</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-about-us.html" class="index-nav__list-link" title="0000 - About us">0000 - About us</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-card-types.html" class="index-nav__list-link" title="0000 - Card types">0000 - Card types</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-careers.html" class="index-nav__list-link" title="0000 - Careers">0000 - Careers</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-single-offer-1.html" class="index-nav__list-link" title="0000 - Single offer 1">0000 - Single offer 1</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-single-offer-2.html" class="index-nav__list-link" title="0000 - Single offer 2">0000 - Single offer 2</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-events.html" class="index-nav__list-link" title="0000 - Events">0000 - Events</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-single-event.html" class="index-nav__list-link" title="0000 - Single event">0000 - Single event</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-for-partners.html" class="index-nav__list-link" title="0000 - For Partners">0000 - For Partners</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-for-business.html" class="index-nav__list-link" title="0000 - For Business">0000 - For Business</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-hero-banner.html" class="index-nav__list-link" title="0000 - Hero banner">0000 - Hero banner</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-hero-video.html" class="index-nav__list-link" title="0000 - Hero video">0000 - Hero video</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-get-an-offer-send.html" class="index-nav__list-link" title="0000 - Get an offer / Send">0000 - Get an offer / Send</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-get-an-offer-partner.html" class="index-nav__list-link" title="0000 - Get an offer / Partner">0000 - Get an offer / Partner</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-get-an-offer-recommendation.html" class="index-nav__list-link" title="0000 - Get an offer / Recommendation">0000 - Get an offer / Recommendation</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-get-an-offer-employee.html" class="index-nav__list-link" title="0000 - Get an offer / Employee">0000 - Get an offer / Employee</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-faq.html" class="index-nav__list-link" title="0000 - FAQ">0000 - FAQ</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-success-message-page.html" class="index-nav__list-link" title="0000 - Success message page">0000 - Success message page</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././0000-404.html" class="index-nav__list-link" title="0000 - 404">0000 - 404</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././9999-typography.html" class="index-nav__list-link" title="9999 - Typography">9999 - Typography</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././9999-form-elements.html" class="index-nav__list-link" title="9999 - Form-elements">9999 - Form-elements</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././9999-sitemap.html" class="index-nav__list-link" title="9999 - Sitemap">9999 - Sitemap</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="./9999-styleguide.html" class="index-nav__list-link" title="9999 - Styleguide">9999 - Styleguide</a>
+            </li>
+
+            <li class="index-nav__list-item">
+              <a href="././mail/mail.html" class="index-nav__list-link" title="9999 - Mail">9999 - Mail</a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+
+</html>

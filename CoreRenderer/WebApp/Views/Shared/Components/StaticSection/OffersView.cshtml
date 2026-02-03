@@ -1,0 +1,40 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section class="card-tab">
+    <div class="wrapper">
+        <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Column1", "Column 1")">
+            
+        </div>
+        
+        <div class="card-tab__desktop  js-tabs" data-id="tabs-direction">
+            
+
+            <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Column2", "Column 2")" class="card-tab__desktop-box card-tab__desktop-box--left tabs__panel js-tab-panel is-current" aria-labelledby="tab__employers">
+                @* <h3 class="title title--black title--m">For Employers</h3>
+                <div class="text">
+                    <p>
+                        We offer activities for all age groups, families and individuals.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id imperdiet risus. Mauris euismod elit eu lorem dignissim maximus. Aenean convallis augue sem, nec consequat felis consectetur in. Integer sollicitudin mi a risus consectetur, nec eleifend orci sagittis.</p>
+                </div>
+                <a class="button button--primary" href="#">Get an offer</a> *@
+            </div>
+            <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Column3", "Column 3")" class="card-tab__desktop-box card-tab__desktop-box--right tabs__panel js-tab-panel" aria-labelledby="tab__partners">
+                @* <h3 class="title title--black title--m">For Partners</h3>
+                <div class="text">
+                    <p>
+                        Focused on mutual success, we are happy to share our experience and possibilities.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id imperdiet risus. Mauris euismod elit eu lorem dignissim maximus. Aenean convallis augue sem, nec consequat felis consectetur in. Integer sollicitudin mi a risus consectetur, nec eleifend orci sagittis.</p>
+                </div>
+                <a class="button button--primary" href="#">Get an offer</a> *@
+            </div>
+        </div>
+    </div>
+</section>

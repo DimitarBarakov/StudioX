@@ -1,0 +1,39 @@
+﻿@using WebApp.ViewModels.Card
+
+
+@model CardViewModel
+
+<section class="hero hero--white">
+    <div class="wrapper wrapper--1270">
+        <div class="hero__info">
+
+            <h1 class="title title--black title--l">@Model.CardTitle</h1>
+
+            <div class="text">
+                <p>@Model.CardText</p>
+            </div>
+
+            <a class="button button--primary" href="@Model.Link">@Model.LinkText</a>
+
+        </div>
+        <div class="hero__wrap-img">
+            <div class="hero__graphic">
+                <picture class=" aspect-ratio" style="--aspect-ratio: 778/632; ">
+                    <!-- size 778/632 -->
+                    <img width="778" height="632" src="~/dist/web/images/top-graphic111.svg" fetchPriority="high" alt="picture">
+                </picture>
+            </div>
+            <div class="hero__photo">
+                <svg id="raindropSVG" viewBox="0 0 730 605" preserveAspectRatio="xMinYMin meet">
+                    <defs>
+                        <clipPath id="raindropClipPath">
+                            <path d="M414.252 43.135c26.803 8.842 52.235 22.183 69.36 41.958 21.167 24.422 27.752 55.99 35.94 85.955 18.129 66.305 46.995 131.405 45.633 200.089-1.361 68.684-43.526 144.609-120.116 164.787-83.871 22.107-164.313-28.897-246.557-50.697-29.534-7.831-61.137-12.196-86.823-26.776-113.39-64.366-10.411-185.152 15.953-267.35C165.089 74.293 273.18-3.39 414.252 43.135z">
+                            </path>
+                        </clipPath>
+                    </defs>
+                    <image class="clipped-img" xlink:href="@Model.Image.Url" x="0" y="0" width="840" height="595"></image>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>

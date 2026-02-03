@@ -4,31 +4,24 @@
 @model CustomListViewModel
 <div class="list-bg text-@Model.TextAlign @Model.Margin">
 
-    @* Title *@
     @if (!string.IsNullOrWhiteSpace(Model.Title))
     {
-        <h2 style="margin-bottom:30px">
-            @Model.Title
-        </h2>
+        <h2 style="margin-bottom:30px">@Model.Title</h2>
     }
 
-    @* List *@
     @if (Model.Items?.Any() == true)
     {
         <ul>
             @foreach (var item in Model.Items)
             {
-                if (!string.IsNullOrWhiteSpace(item))
+                if (!string.IsNullOrWhiteSpace(item.ItemText))
                 {
-                    <li class="list-item">
-                        @item
-                    </li>
+                    <li class="list-item">@item.ItemText</li>
                 }
             }
         </ul>
     }
 
-    @* Button *@
     @if (!string.IsNullOrWhiteSpace(Model.LinkText) &&
         !string.IsNullOrWhiteSpace(Model.Link.ToString()))
     {

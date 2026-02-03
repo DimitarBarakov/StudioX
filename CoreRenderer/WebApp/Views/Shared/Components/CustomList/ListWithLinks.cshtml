@@ -1,0 +1,21 @@
+﻿@using ViewComponents.CustomList
+@using WebApp.ViewModels.CustomList
+
+@model CustomListViewModel
+<div class="photo-left-links__box">
+    <ul class="photo-left-links__list">
+
+        @foreach (var item in Model.Items)
+        {
+
+            <li class="photo-left-links__item">
+                <a class="photo-left-links__item-link" href="#">
+                    <span class="photo-left-links__position">@item.ItemText</span>
+                </a>
+                <span class="photo-left-links__city">@item.ItemTitle</span>
+            </li>
+
+        }
+    </ul>
+    <a class="link link--primary" href="@Model.Link">@Model.LinkText</a>
+</div>

@@ -27,6 +27,8 @@
 
     @* Custom styles *@
     <link rel="stylesheet" href="~/styles/styles.css" />
+    <link rel="stylesheet" href="~/dist/web/css/main.css" asp-append-version="true" />
+
 
     @* Custom scripts *@
     <script src="~/scripts/scripts.js"></script>
@@ -34,8 +36,8 @@
 
 <body class="container-fluid">
     <header data-sfcontainer="Header"></header>
-    <main data-sfcontainer="Main"></main>
-    <footer data-sfcontainer="Footer" class="footer-nav"></footer>
+    <main data-sfcontainer="Main">@RenderBody()</main>
+    <footer data-sfcontainer="Footer"></footer>
     @RenderSection("Scripts")
 </body>
 </html>

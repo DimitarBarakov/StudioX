@@ -1,0 +1,29 @@
+﻿@using ViewComponents.Card;
+@using WebApp.ViewModels.Card
+
+@model CardViewModel
+
+<div class="swiper-slide">
+    <a class="facilities__link" href="#">
+        <div class="facilities__wrap-img">
+            <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                <!-- size 287/292 -->
+                <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_32.png" alt="picture">
+            </picture>
+        </div>
+        <span class="facilities__link-text">Tennis</span>
+    </a>
+</div>
+
+@* @if (Model.Image != null)
+{
+    <a class="facilities__link" href="@Model.Link">
+        <div class="facilities__wrap-img">
+            <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                <!-- size 287/292 -->
+                <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_30.png" alt="picture">
+            </picture>
+        </div>
+        <span class="facilities__link-text">@Model.CardTitle</span>
+    </a>
+} *@

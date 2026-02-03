@@ -1,0 +1,21 @@
+﻿@using Progress.Sitefinity.AspNetCore.TagHelpers;
+@using Progress.Sitefinity.AspNetCore.Widgets.Models.Navigation;
+@using WebApp.ViewModels
+
+@* @model Progress.Sitefinity.AspNetCore.Widgets.Models.Navigation.NavigationViewModel
+ *@
+@model ExtendedNavigationViewModel
+
+<nav class="main-footer__bottom-nav">
+    <ul class="main-footer__bottom-list">
+
+        @foreach(var node in Model.Nodes)
+        {
+            <li class="main-footer__small-item">
+                <a class="main-footer__small-link" href="@node.Url">
+                    @node.Title
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

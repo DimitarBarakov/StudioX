@@ -6,7 +6,21 @@
  *@
 @model ExtendedNavigationViewModel
 
-<ul class="navbar-nav flex-row">
+<ul class="nav__list">
+    @foreach (var node in Model.Nodes)
+    {
+        <li class="nav__item">
+            <a class="nav__link" href="@node.Url">
+                <span class="nav__link-text" data-text="@node.Title">@node.Title</span>
+            </a>
+        </li>
+    }
+</ul>
+
+
+
+
+@* <ul class="navbar-nav flex-row">
     @foreach (var node in Model.Nodes)
     {
         <li class="nav-item me-3">
@@ -14,5 +28,39 @@
         </li>
     }
 
-</ul>
+</ul> *@
+
+@* <ul class="nav__list">
+
+    <li class="nav__item  is-active ">
+        <a class="nav__link  is-active " href="#">
+            <span class="nav__link-text" data-text="For Companies">For Companies</span>
+        </a>
+    </li>
+
+    <li class="nav__item ">
+        <a class="nav__link " href="#">
+            <span class="nav__link-text" data-text="For Partners">For Partners</span>
+        </a>
+    </li>
+
+    <li class="nav__item ">
+        <a class="nav__link " href="#">
+            <span class="nav__link-text" data-text="Careers">Careers</span>
+        </a>
+    </li>
+
+    <li class="nav__item ">
+        <a class="nav__link " href="#">
+            <span class="nav__link-text" data-text="Facilities">Facilities</span>
+        </a>
+    </li>
+
+    <li class="nav__item ">
+        <a class="nav__link " href="#">
+            <span class="nav__link-text" data-text="My MultiSport">My MultiSport</span>
+        </a>
+    </li>
+
+</ul> *@
 

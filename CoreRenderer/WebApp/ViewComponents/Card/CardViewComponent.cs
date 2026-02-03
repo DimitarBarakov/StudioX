@@ -71,6 +71,7 @@ namespace ViewComponents.Card
 
             var imageResult = await restClient.GetItems<ImageDto>(imageContext);
 
+
             if (imageResult?.Items != null && imageResult?.Items?.Count > 0)
             {
                 model.Image = imageResult.Items[0];
@@ -99,18 +100,18 @@ namespace ViewComponents.Card
 
         [ContentSection(CardSectionName)]
         [DisplayName("Card Title")]
-        [Required]
+        
         public string CardTitle { get; set; }
 
         [ContentSection(CardSectionName)]
         [DisplayName("Card Subtitle")]
-        [Required]
+        
         public string CardSubtitle { get; set; }
 
         [ContentSection(CardSectionName)]
         [DataType(customDataType: KnownFieldTypes.TextArea)]
         [DisplayName("Card Text")]
-        [Required]
+        
         public string CardText { get; set; }
         #endregion
 

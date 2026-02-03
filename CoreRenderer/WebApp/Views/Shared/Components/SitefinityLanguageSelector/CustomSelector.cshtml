@@ -1,0 +1,12 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.LanguageSelector
+
+@model LanguageSelectorViewModel
+<div class="main-header__language">
+    <span class="main-header__language-burger">Language:</span>
+    @foreach (var lng in Model.Languages)
+    {
+        <a class="main-header__language-link active" href="#">
+            @lng.Value
+        </a>
+    }
+</div>

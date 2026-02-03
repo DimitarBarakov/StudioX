@@ -1,0 +1,14 @@
+﻿@using ViewComponents.CustomImage;
+@using WebApp.ViewModels
+
+@model CustomImageViewModel
+
+@if (Model.Image != null)
+{
+    <div class="photo-left-links__wrap-img">
+        <picture class="aspect-ratio" style="--aspect-ratio: 1024/750; --aspect-ratio-s: 768/595; ">
+        <!-- size 1024/750 -->
+        <img width="1024" height="750" src="@Model.Image.Url" loading="lazy" alt="picture">
+        </picture>
+    </div>
+}

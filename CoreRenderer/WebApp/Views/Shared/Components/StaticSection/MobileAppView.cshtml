@@ -1,0 +1,68 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section class="mobile-app mb-115">
+    <div class="wrapper">
+        <!-- <h2 class="mobile-app__title-mob title title--black title--ml">Mobile App</h2> -->
+        <!-- <div class="mobile-app__info"> -->
+        <div class=" title title--black title--ml" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Title", "Title")"></div>
+        <div class="text" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Text", "Text")">
+            
+        </div>
+        <div class="mobile-app__links">
+            <div class="mobile-app__link col" data-sfcontainer container-context="@this.Model.Context.ContainerContext("GooglePlay", "GooglePlay")">
+                @* <a class="mobile-app__link" style="--width-img: 195px" href="#">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 155/52; ">
+                        <img width="155" height="52" src="~/dist/web/images/google-play-badge-1.svg" loading="lazy" alt="app">
+                    </picture>
+                </a> *@
+            </div>
+            <div class="mobile-app__link col" data-sfcontainer container-context="@this.Model.Context.ContainerContext("AppStore", "AppStore")">
+                @* <a class="mobile-app__link" href="#">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 155/52; ">
+                        <img width="155" height="52" src="~/dist/web/images/download-on-the-app-store-1.svg" loading="lazy" alt="app">
+                    </picture>
+                </a> *@
+            </div>
+            
+        </div>
+        
+        <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("List", "List")">
+            
+        </div>
+        @* <ul class="mobile-app__list">
+
+            <li class="mobile-app__item">
+                <span class="mobile-app__item-text">
+                    You can switch your plastic card to virtual card and use it only from your mobile phone.
+                </span>
+            </li>
+
+            <li class="mobile-app__item">
+                <span class="mobile-app__item-text">
+                    After you verify your identity at first visit, there is no need to bring you identitty for next time.
+                </span>
+            </li>
+
+            <li class="mobile-app__item">
+                <span class="mobile-app__item-text">
+                    Search for facilities near you.
+                </span>
+            </li>
+
+        </ul> *@
+        <!-- </div> -->
+        <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Picture", "Picture")" class="mobile-app__wrap-img">
+            @* <picture class="aspect-ratio" style="--aspect-ratio: 1024/1061; --aspect-ratio-s: 640/700;">
+                <!-- size 1024/1061 -->
+                <img width="1024" height="1061" src="web/images/mobile-app-promo.svg" loading="lazy" alt="picture">
+            </picture> *@
+        </div>
+    </div>
+</section>

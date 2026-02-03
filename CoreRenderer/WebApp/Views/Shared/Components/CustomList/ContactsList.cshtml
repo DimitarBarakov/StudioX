@@ -1,0 +1,15 @@
+﻿@using ViewComponents.CustomList
+@using WebApp.ViewModels.CustomList
+
+@model CustomListViewModel
+<h2 class="main-footer__title">@Model.Title</h2>
+<ul>
+    @foreach(var item in Model.Items)
+    {
+        <li>
+            <a class="main-footer__media-link" href="@item.ItemLinkText">
+                @item.ItemText
+            </a>
+        </li>
+    }
+</ul>

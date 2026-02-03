@@ -1,6 +1,7 @@
 using AngleSharp.Css.Dom;
 using Microsoft.AspNetCore.Mvc;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
+using Progress.Sitefinity.AspNetCore.ViewComponents.AttributeConfigurator.Attributes;
 using Progress.Sitefinity.AspNetCore.Widgets.Models.Common;
 using Progress.Sitefinity.AspNetCore.Widgets.ViewComponents.Common;
 using Progress.Sitefinity.Renderer.Designers.Attributes;
@@ -9,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using ViewComponents.Card;
 using WebApp.ViewModels.Card;
 using WebApp.ViewModels.CustomList;
@@ -46,7 +48,7 @@ namespace ViewComponents.CustomList
             model.Items = context.Entity.Items;
             model.Link = context.Entity.Link;
 
-            return this.View(model);
+            return this.View(context.Entity.View, model);
         }
         private void BuildSectionMargins(IViewComponentContext<CustomListEntity> context, CustomListViewModel model)
         {
@@ -88,7 +90,7 @@ namespace ViewComponents.CustomList
         public string Title { get; set; }
 
         [DisplayName("Items")]
-        public IList<string> Items { get; set; } = new List<string>();
+        public IList<ListItemBase> Items { get; set; } = new List<ListItemBase>();
 
 
         [Description("Page, Content Item, or Url")]
@@ -102,6 +104,16 @@ namespace ViewComponents.CustomList
 
         [TableView("Section")]
         public MarginStyle Margin{ get; set; }
+
+        [ViewSelector]
+        public string View { get; set; }
+    }
+
+    public class ListItemBase
+    {
+        public string ItemTitle { get; set; }
+        public string ItemText { get; set; }
+        public string ItemLinkText { get; set; }
     }
 
     public enum TextAlignment

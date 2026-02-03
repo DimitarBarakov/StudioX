@@ -1,0 +1,138 @@
+﻿@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@model StaticSectionViewModel
+
+
+<footer class="main-footer">
+
+    <div class="wrapper">
+        <div class="main-footer__wrap">
+            <section>
+                <div class="main-footer__wrap-item">
+                    <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Logo", "Logo")">
+                    </div>
+                    @* <a class="main-footer__logo" href="#">
+                        <picture class="aspect-ratio" style="--aspect-ratio: 148/31">
+                            <img width="148" height="31" loading="lazy" src="~/dist/web/images/logo-white.svg" alt="logo">
+                        </picture>
+                    </a> *@
+
+                    <div class="main-footer__text container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Text", "Text")">
+                        @* Live actively with MultiSport. One card. Lots of opportunities. *@
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="main-footer__wrap-item main-footer__wrap-item--center">
+                <section>
+                    <nav>
+                        <div class="main-footer__list ">
+                            <div class="main-footer__item" data-sfcontainer="FooterNav1" container-context="@this.Model.Context.ContainerContext("FooterNav1", "FooterNav1")">
+                            </div>
+
+                            <div class="main-footer__item" data-sfcontainer container-context="@this.Model.Context.ContainerContext("FooterNav2", "FooterNav2")">
+                            </div>
+                        </div>
+                    </nav>
+                </section>
+
+
+            </div>
+            <div class="main-footer__wrap-item">
+                <div class="main-footer__item-contact">
+                    <section>
+                        @* <div class="main-footer__title container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("ContactsTitle", "ContactsTitle")"></div> *@
+                        <div class="main-footer__media container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Contacts", "Contacts")">
+                            @* <a class="main-footer__media-link" href="tel:+359879280284">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="~/dist/web/images/icons/symbol-defs.svg#icon-footer-call"></use>
+                                </svg>
+                                +359 879 280 284
+                            </a>
+                            <a class="main-footer__media-link" href="mailto:info@benefitsystems.bg">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="~/dist/web/images/icons/symbol-defs.svg#icon-footer-mail"></use>
+                                </svg>
+                                info@benefitsystems.bg
+                            </a>
+                            <a class="main-footer__media-link address" href="#">
+                                <svg class="icon icon--16">
+                                    <use src="~/dist/web/images/icons/symbol-defs.svg#icon-footer-pin_drop"></use>
+                                </svg>
+                                <address>11-13 Yunak str., 1st fl., Sofia 1612</address>
+                            </a> *@
+                        </div>
+                    </section>
+                    
+                    <ul class="main-footer__social">
+
+                        <li class="main-footer__social-item">
+                            <a class="main-footer__social-link" href="#">
+                                <span class="visuallyhidden">facebook</span>
+                                <img class="lazyload icon icon--24" width="24" height="24" loading="lazy" src="~/dist/web/images/fb.svg" alt="facebook">
+                            </a>
+                        </li>
+
+                        <li class="main-footer__social-item">
+                            <a class="main-footer__social-link" href="#">
+                                <span class="visuallyhidden">linkedin</span>
+                                <img class="lazyload icon icon--24" width="24" height="24" loading="lazy" src="~/dist/web/images/linkedin.svg" alt="linkedin">
+                            </a>
+                        </li>
+
+                        <li class="main-footer__social-item">
+                            <a class="main-footer__social-link" href="#">
+                                <span class="visuallyhidden">instagram</span>
+                                <img class="lazyload icon icon--24" width="24" height="24" loading="lazy" src="~/dist/web/images/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="main-footer__wrap-item">
+                <section>
+                    <div class="main-footer__item-app">
+                        <div class="main-footer__title container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("AppTitle", "AppTitle")">
+
+                        </div>
+                        <div class="main-footer__small-list">
+                            <div class="main-footer__small-item container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("GooglePlay", "GooglePlay")">
+                                @* <a class="main-footer__media-link main-footer__media-link--picture" href="/">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 180/52; --width: 180px">
+                                        <img width="180" height="52" src="temp-files/google_play.svg" srcset="~/dist/temp-files/google_play.svg" loading="lazy" alt="picture">
+                                    </picture>
+                                </a> *@
+                            </div>
+                            <div class="main-footer__small-item container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("AppStore", "AppStore")">
+                                @* <a class="main-footer__media-link main-footer__media-link--picture" href="/">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 180/52; --width: 180px">
+                                        <img width="180" height="52" src="temp-files/app_store.svg" srcset="~/dist/temp-files/app_store.svg" loading="lazy" alt="picture">
+                                    </picture>
+                                </a> *@
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+        <div class="main-footer__wrap-line">
+            <section>
+                <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("BottomNav", "BottomNav")">
+                </div>
+
+                <div class="main-footer__botton center container" data-sfcontainer="BottomText" container-context="@this.Model.Context.ContainerContext("BottomText", "BottomText")">
+                    @* <p class="main-footer__botton center">Benefit Systems | MultiSport 2022</p> *@
+                    <entity-container context="@Model.Context.ContainerContext("BottomText", "Bottom Text")" />
+                </div>
+            </section>
+            
+        </div>
+    </div>
+</footer>

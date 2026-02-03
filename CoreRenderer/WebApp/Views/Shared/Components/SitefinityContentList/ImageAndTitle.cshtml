@@ -1,0 +1,30 @@
+﻿﻿@using Progress.Sitefinity.AspNetCore.TagHelpers;
+@using Progress.Sitefinity.AspNetCore.Models;
+@using Progress.Sitefinity.AspNetCore.Widgets.Models.Common;
+@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+<div class="custom-content-grid">
+    @foreach (var item in Model.Items)
+    {
+        // Get the title (usually in the 'Title' or 'Heading' field)
+        var title = item.GetValue<string>("Title");
+
+        // Get the related image
+        var image = item.GetValue<dynamic>("Image");
+
+        <div class="content-card">
+            @if (image != null)
+            {
+                <img src="@image.SelectedImageUrl" alt="@image.AlternativeText" style="width:200px; height:auto;" />
+            }
+            <h3>@title</h3>
+            
+            @* Optional: Link to the details page *@
+            <a href="@Model.DetailItemUrl">Read more</a>
+        </div>
+    }
+</div>

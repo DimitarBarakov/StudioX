@@ -1,0 +1,131 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section class="facilities mb-127">
+    <div class="wrapper">
+        <div class="facilities__primary">
+            <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Title", "Title")"></div>
+            <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Text", "Text")" class="facilities__primary-text">
+                @* We have 89 009+ sport failities in COUNTRY. Type your city or activity name. You can also click on photo of our most popular activities below. *@
+            </div>
+            <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Button", "Button")"></div>
+            @* <a class="button button--primary-white" href="#">Go to search</a> *@
+        </div>
+
+        <div class="facilities__gallery js-slider" data-slider="facilities-2" data-id="slider-facilities">
+            <div class="facilities__gallery-swiper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Fac1", "Fac1")" class="swiper-slide">
+                            @* <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_29.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Pilates</span>
+                            </a> *@
+                        </div>
+
+                        <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Fac2", "Fac2")" class="swiper-slide">
+                            @* <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_30.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Dance</span>
+                            </a> *@
+                        </div>
+
+                        <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Fac3", "Fac3")" class="swiper-slide">
+                            @* <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_31.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Swimming</span>
+                            </a> *@
+                        </div>
+
+                        <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Fac4", "Fac4")" class="swiper-slide">
+                            @* <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_32.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Tennis</span>
+                            </a> *@
+                        </div>
+
+                        <div data-sfcontainer container-context="@this.Model.Context.ContainerContext("Fac5", "Fac5")" class="swiper-slide">
+                            @* <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_33.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Yoga</span>
+                            </a> *@
+                        </div>
+
+                        @* <div class="swiper-slide">
+                            <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_32.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Tennis</span>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a class="facilities__link" href="#">
+                                <div class="facilities__wrap-img">
+                                    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+                                        <!-- size 287/292 -->
+                                        <img loading="lazy" width="287" height="292" src="~/dist/temp-files/photo_33.png" alt="picture">
+                                    </picture>
+                                </div>
+                                <span class="facilities__link-text">Yoga</span>
+                            </a>
+                        </div> *@
+
+                    </div>
+                </div>
+
+                <div class="facilities__controls">
+                    <button type="button" class="slider-prev-btn">
+                        <svg class="icon icon--25">
+                            <use xlink:href="~/dist/web/images/icons/symbol-defs.svg#icon-arrow_1"></use>
+                        </svg>
+                        <span class="visuallyhidden">prev</span>
+                    </button>
+                    <button type="button" class="slider-next-btn">
+                        <svg class="icon icon--25">
+                            <use xlink:href="~/dist/web/images/icons/symbol-defs.svg#icon-arrow_2"></use>
+                        </svg>
+                        <span class="visuallyhidden">next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

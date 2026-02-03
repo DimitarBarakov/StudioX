@@ -1,0 +1,15 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@* @model Telerik.Sitefinity.AspNetCore.Mvc.Widgets.Image.ImageViewModel
+ *@
+@model ImageViewModel
+@* You can access Model.SelectedSize, Model.Title, Model.AlternativeText, etc. *@
+
+
+<div class="facilities__wrap-img">
+    <picture class="aspect-ratio" style="--aspect-ratio: 287/292; ">
+        <!-- size 287/292 -->
+        <img loading="lazy" width="287" height="292" src="@Model.SelectedImageUrl" alt="picture">
+    </picture>
+</div>
+<span class="facilities__link-text">@Model.Title</span>
+
