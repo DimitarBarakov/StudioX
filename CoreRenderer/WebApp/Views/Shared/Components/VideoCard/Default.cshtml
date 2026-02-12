@@ -1,0 +1,31 @@
+@using ViewComponents.VideoCard;
+
+@model VideoCardEntity
+
+<section class="hero hero--primary hero--primary-video  hero--full-text ">
+    <div class="wrapper">
+        <div class="hero__info">
+
+            <h1 class="title title--white title--l">@Model.Title</h1>
+
+            <div class="text">
+                <p>@Model.Text</p>
+            </div>
+
+            <a class="button button--white" href="@Model.Link">@Model.LinkText</a>
+
+        </div>
+        <div class="hero__wrap-img">
+            <div class="aspect-ratio" style="--aspect-ratio: 640/360; ">
+                <!-- size 640/360 -->
+                <div class="js-yTvideo" data-id="randomID2312321" data-video-yt-id="u_XddWZ3vFU">
+                </div>
+                @* <iframe width="640"
+                        height="360"
+                        src="https://www.youtube.com/watch?v=u_XddWZ3vFU"
+                        loading="lazy">
+                </iframe> *@
+            </div>
+        </div>
+    </div>
+</section>

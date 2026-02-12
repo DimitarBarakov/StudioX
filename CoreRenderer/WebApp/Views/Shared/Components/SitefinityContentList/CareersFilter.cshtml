@@ -1,0 +1,54 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+@{
+    var dict = new Dictionary<string, int>();
+    foreach(var item in Model.Items)
+    {
+        var position = item.GetValue<string>("Position");
+        var level = item.GetValue<string>("Level");
+        var location = item.GetValue<string>("Location");
+        var link = item.GetValue<string>("Link");
+        var linkText = item.GetValue<string>("LinkText");
+
+        if (dict.ContainsKey(location))
+        {
+            dict[location]++;
+        }
+        else
+        {
+            dict.Add(location, 1);
+        }
+    }
+    <ul class="filter-team__filters">
+        <li class="filter-team__filters-item is-active js-filter-button" data-filter='all'>
+            All cities
+        </li>
+        @foreach(var pair in dict)
+        {
+            <li class="filter-team__filters-item js-filter-button" data-filter='@pair.Key.ToLower()'>
+                @pair.Key (<span class= "filter-team__filters-count js-filter-count" >@pair.Value</span>)
+            </li>
+        }
+    </ul>
+}
+
+
+
+@* <ul class="filter-team__filters">
+    <li class="filter-team__filters-item is-active js-filter-button" data-filter='all'>
+        All cities
+    </li>
+    <li class="filter-team__filters-item js-filter-button" data-filter='prague'>
+        Prague (<span class="filter-team__filters-count js-filter-count">2</span>)
+    </li>
+    <li class="filter-team__filters-item js-filter-button" data-filter='ostrava'>
+        Ostrava (<span class="filter-team__filters-count js-filter-count">1</span>)
+    </li>
+    <li class="filter-team__filters-item js-filter-button" data-filter='sofia'>
+        Sofia (<span class="filter-team__filters-count js-filter-count">1</span>)
+    </li>
+</ul> *@

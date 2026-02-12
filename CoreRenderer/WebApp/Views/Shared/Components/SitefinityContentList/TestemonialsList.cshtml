@@ -1,0 +1,44 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+
+@* <div class="testimonials__swiper">
+    <div class="swiper">*@
+        <ul class="swiper-wrapper"> 
+            @foreach (var item in Model.Items)
+            {
+                var title = item.GetValue<string>("Title");
+                var content = item.GetValue<string>("Content");
+                var image = Model.GetFirstRelatedMedia(item, "Image");
+
+                <li class="swiper-slide">
+                    <!-- <a href="#"> -->
+                    <div class="testimonials__swiper-box">
+                        <div class="testimonials__photo">
+                            <picture class="aspect-ratio" style="--aspect-ratio: 115/115; ">
+                                <!-- size 115/115 -->
+                                @if (image != null)
+                                {
+                                    <img width="115" height="115" src="@image.Url" loading="lazy" alt="picture">
+                                }
+                            </picture>
+                        </div>
+                        <div class="testimonials__description">
+                            <div class="text">
+                                <p>@content</p>
+                            </div>
+                            <span class="testimonials__name">@title</span>
+                        </div>
+                    </div>
+                    <!-- </a> -->
+                </li>
+            }
+ 
+        </ul>
+@*
+    </div>
+</div>
+ *@

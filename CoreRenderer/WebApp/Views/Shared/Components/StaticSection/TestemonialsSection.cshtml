@@ -1,0 +1,41 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+
+<section class="testimonials   back-light-blue    mb-120   js-slider" data-desktop="1024" data-slider="testimonials" data-id="slider-testimonials">
+    <div class="wrapper wrapper--inner">
+        @* <h2 class="title title--black title--ml">Our clients testimonials</h2> *@
+        <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("title", "title")"></div>
+        <section class="testimonials__box">
+            <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("card", "card")">
+                
+            </div>
+            <div class="testimonials__swiper">
+                <div class="swiper" data-sfcontainer container-context="@this.Model.Context.ContainerContext("list", "list")">
+                        @* <div class="col-lg-7" data-sfcontainer container-context="@this.Model.Context.ContainerContext("list", "list")">
+                
+                        </div> *@
+                </div>
+            </div>
+        </section>
+        <div class="testimonials__control">
+            <button type="button" class="testimonials__prev-btn">
+                <svg class="icon icon--25">
+                    <use xlink:href="/dist/web/images/icons/symbol-defs.svg#icon-arrow_1"></use>
+                </svg>
+                <span class="visuallyhidden">prev</span>
+            </button>
+            <button type="button" class="testimonials__next-btn">
+                <svg class="icon icon--25">
+                    <use xlink:href="/dist/web/images/icons/symbol-defs.svg#icon-arrow_2"></use>
+                </svg>
+                <span class="visuallyhidden">next</span>
+            </button>
+        </div>
+    </div>
+</section>

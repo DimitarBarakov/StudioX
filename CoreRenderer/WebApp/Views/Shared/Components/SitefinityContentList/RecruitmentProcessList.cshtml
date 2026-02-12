@@ -1,0 +1,23 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+
+<ul class="process__list">
+    @foreach (var item in Model.Items)
+    {
+        var title = item.GetValue<string>("Title");
+        var content = item.GetValue<string>("Content");
+
+        <li class="process__item">
+            <div class="process__box">
+                <span class="process__num">@title</span>
+                <div class="process__info">
+                    <span class="process__subtitle">@content</span>
+                </div>
+            </div>
+        </li>
+    }
+</ul>

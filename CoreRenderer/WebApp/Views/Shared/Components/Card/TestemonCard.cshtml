@@ -1,0 +1,14 @@
+﻿@using WebApp.ViewModels.Card
+
+@model CardViewModel;
+<div class="testimonials__info">
+    <div class="text">
+        <p>@Model.CardText</p>
+    </div>
+    <a href="#">
+        <picture class="aspect-ratio" style="--aspect-ratio: 148/31; ">
+            <!-- size 148/31 -->
+            <img width="148" height="31" src="@Model.Image.Url" loading="lazy" alt="picture">
+        </picture>
+    </a>
+</div>

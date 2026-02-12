@@ -1,0 +1,113 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section class="filter-team js-filter-city mb-163" data-id='l;vdaejn;vbijernpi'>
+    <div class="wrapper">
+        <div class="title title--black title--ml container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Title", "Title")"></div>
+        <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("filte", "filter")"></div>
+        @* <ul class="filter-team__filters">
+            <li class="filter-team__filters-item is-active js-filter-button" data-filter='all'>
+                All cities
+            </li>
+            <li class="filter-team__filters-item js-filter-button" data-filter='prague'>
+                Prague (<span class="filter-team__filters-count js-filter-count">2</span>)
+            </li>
+            <li class="filter-team__filters-item js-filter-button" data-filter='ostrava'>
+                Ostrava (<span class="filter-team__filters-count js-filter-count">1</span>)
+            </li>
+            <li class="filter-team__filters-item js-filter-button" data-filter='sofia'>
+                Sofia (<span class="filter-team__filters-count js-filter-count">1</span>)
+            </li>
+        </ul> *@
+        <div class="filter-team__list container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("CareersList", "CareersList")">
+
+            @* <li class="filter-team__item js-filter-item" data-item-filter=prague>
+                <div class="filter-team__box">
+                    <div class="filter-team__info">
+                        <span class="filter-team__subtitle">Performance Marketing Specialist</span>
+                        <div class="filter-team__discription">
+                            <div class="filter-team__city">
+                                <svg class="icon icon--20">
+                                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-pin_drop-green"></use>
+                                </svg>
+                                Prague
+                            </div>
+                            <div class="filter-team__level">
+                                <svg class="icon icon--20">
+                                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-signal_cellular_alt"></use>
+                                </svg>
+                                regular / mid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-team__links">
+                        <a class="button button--primary" href="#">View</a>
+                        <a class="link" href="#">View this offer</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="filter-team__item js-filter-item" data-item-filter=prague>
+                <div class="filter-team__box">
+                    <div class="filter-team__info">
+                        <span class="filter-team__subtitle">Junior Product Manager</span>
+                        <div class="filter-team__discription">
+                            <div class="filter-team__city">
+                                <svg class="icon icon--20">
+                                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-pin_drop-green"></use>
+                                </svg>
+                                Prague
+                            </div>
+                            <div class="filter-team__level">
+                                <svg class="icon icon--20">
+                                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-signal_cellular_alt"></use>
+                                </svg>
+                                junior
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-team__links">
+                        <a class="button button--primary" href="#">View</a>
+                        <a class="link" href="#">View this offer</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="filter-team__item js-filter-item" data-item-filter=ostrava>
+                <div class="filter-team__box">
+                    <div class="filter-team__info">
+                        <span class="filter-team__subtitle">Account Consultant</span>
+                        <div class="filter-team__discription">
+                            <div class="filter-team__city">
+                                <svg class="icon icon--20">
+                                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-pin_drop-green"></use>
+                                </svg>
+                                Ostrava
+                            </div>
+                            <div class="filter-team__level">
+                                <svg class="icon icon--20">
+                                    <use xlink:href="./web/images/icons/symbol-defs.svg#icon-signal_cellular_alt"></use>
+                                </svg>
+                                regular / mid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-team__links">
+                        <a class="button button--primary" href="#">View</a>
+                        <a class="link" href="#">View this offer</a>
+                    </div>
+                </div>
+            </li> *@
+
+        </div>
+        <!-- Removed by client-->
+        <!-- <div class="filter-team__footnote">
+          Don’t know which position suit you the best? <a class="link link--primary" href="#"> Send us your CV</a>
+        </div> -->
+    </div>
+</section>

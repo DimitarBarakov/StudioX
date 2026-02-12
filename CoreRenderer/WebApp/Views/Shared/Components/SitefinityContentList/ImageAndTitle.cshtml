@@ -16,7 +16,7 @@
         // Get the related image
         var image = item.GetValue<dynamic>("Image");
 
-        <div class="content-card">
+        @* * <div class="content-card">
             @if (image != null)
             {
                 <img src="@image.SelectedImageUrl" alt="@image.AlternativeText" style="width:200px; height:auto;" />
@@ -24,7 +24,6 @@
             <h3>@title</h3>
             
             @* Optional: Link to the details page *@
-            <a href="@Model.DetailItemUrl">Read more</a>
-        </div>
+            @* <a href="@Model.DetailItemUrl">Read more</a> *@
     }
 </div>

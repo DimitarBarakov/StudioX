@@ -1,0 +1,40 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+@foreach(var item in Model.Items)
+{
+    var position = item.GetValue<string>("Position");
+    var level = item.GetValue<string>("Level");
+    var location = item.GetValue<string>("Location");
+    var link = item.GetValue<string>("Link");
+    var linkText = item.GetValue<string>("LinkText");
+
+    <div class="filter-team__item js-filter-item" data-item-filter=@location.ToString().ToLower()>
+        <div class="filter-team__box">
+            <div class="filter-team__info">
+                <span class="filter-team__subtitle">@position</span>
+                <div class="filter-team__discription">
+                    <div class="filter-team__city">
+                        <svg class="icon icon--20">
+                            <use xlink:href="/dist/web/images/icons/symbol-defs.svg#icon-pin_drop-green"></use>
+                        </svg>
+                        @location
+                    </div>
+                    <div class="filter-team__level">
+                        <svg class="icon icon--20">
+                            <use xlink:href="/dist/web/images/icons/symbol-defs.svg#icon-signal_cellular_alt"></use>
+                        </svg>
+                        @level
+                    </div>
+                </div>
+            </div>
+            <div class="filter-team__links">
+                <a class="button button--primary" href="@link">@linkText</a>
+                @* <a class="link" href="#">View this offer</a> *@
+            </div>
+        </div>
+    </div>
+}

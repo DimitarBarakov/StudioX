@@ -57,5 +57,83 @@
       "fieldTitle": "Title",
       "fieldType": "ShortText"
     }
+  ],
+  "CareersView": [
+    {
+      "fieldTitle": "Position",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Level",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Location",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Link",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "LinkText",
+      "fieldType": "ShortText"
+    }
+  ],
+  "List.Card": [
+    {
+      "fieldTitle": "Image",
+      "fieldType": "RelatedImage"
+    },
+    {
+      "fieldTitle": "Title",
+      "fieldType": "ShortText"
+    }
+  ],
+  "RecruitmentProcessList": [
+    {
+      "fieldTitle": "Title",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Content",
+      "fieldType": "Text"
+    }
+  ],
+  "TestemonialsList": [
+    {
+      "fieldTitle": "Title",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Content",
+      "fieldType": "Text"
+    },
+    {
+      "fieldTitle": "Image",
+      "fieldType": "RelatedImage"
+    }
+  ],
+  "CareersFilter": [
+    {
+      "fieldTitle": "Position",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Level",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Location",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Link",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "LinkText",
+      "fieldType": "ShortText"
+    }
   ]
 }

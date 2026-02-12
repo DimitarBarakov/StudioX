@@ -1,0 +1,24 @@
+﻿@using WebApp.ViewModels.Card
+
+@model CardViewModel;
+
+<section class="friend pb-163">
+    <div class="wrapper">
+        <div class="friend__box">
+
+            <div class="friend__wrap-img">
+                <picture class="aspect-ratio" style="--aspect-ratio: 330/298; --width: 330px">
+                    <!-- 330/298 -->
+                    <img src="@Model.Image.Url" srcset="@Model.Image.Url 2x" loading="lazy" alt="picture">
+                </picture>
+            </div>
+            <div class="friend__info">
+                <h2 class="title title--black title--ml">@Model.CardTitle</h2>
+                <span class="friend__text">
+                    @Model.CardText
+                </span>
+                <a class="button button--primary" href="@Model.Link">@Model.LinkText</a>
+            </div>
+        </div>
+    </div>
+</section>
