@@ -1,0 +1,20 @@
+﻿@using Progress.Sitefinity.AspNetCore.FormWidgets.ViewModels.MultipleChoice
+@model MultipleChoiceViewModel
+
+<div class=" umbraco-forms-field consentforstoringsubmitteddata dataconsent mandatory alternating">
+    <label for="e04f899c-adc9-4697-9c31-4def1024465c" class="umbraco-forms-label">
+        @Model.Label
+    </label>
+    @foreach (var choice in Model.Choices)
+    {
+        <div class="umbraco-forms-field-wrapper">
+            <input type="checkbox" name="e04f899c-adc9-4697-9c31-4def1024465c" id="e04f899c-adc9-4697-9c31-4def1024465c" value="true" data-umb="e04f899c-adc9-4697-9c31-4def1024465c" data-val="true" data-val-required="Consent is required to store and process the data in this form." data-rule-required="true" data-msg-required="Consent is required to store and process the data in this form.">
+            <input type="hidden" name="e04f899c-adc9-4697-9c31-4def1024465c" value="false">
+
+            <label for="e04f899c-adc9-4697-9c31-4def1024465c">
+                @choice.Value
+            </label>
+            <span class="field-validation-valid" data-valmsg-for="e04f899c-adc9-4697-9c31-4def1024465c" data-valmsg-replace="true"></span>
+        </div>
+    }
+</div>

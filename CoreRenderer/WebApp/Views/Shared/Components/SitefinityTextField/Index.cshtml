@@ -1,1 +1,15 @@
-﻿
+﻿@using Progress.Sitefinity.AspNetCore.FormWidgets.ViewModels.TextField
+@model TextFieldViewModel
+
+
+<div class=" umbraco-forms-field notrequiredfield shortanswer">
+    <label for="88c0a6f9-05d2-4114-adab-dd1cbb783eef" class="umbraco-forms-label">
+        @Model.Label
+    </label>
+
+    <div class="umbraco-forms-field-wrapper">
+        <input type="text" placeholder="@Model.PlaceholderText" name="88c0a6f9-05d2-4114-adab-dd1cbb783eef" id="88c0a6f9-05d2-4114-adab-dd1cbb783eef" data-umb="88c0a6f9-05d2-4114-adab-dd1cbb783eef" class="text " value="" maxlength="255">
+        <span class="field-validation-valid" data-valmsg-for="88c0a6f9-05d2-4114-adab-dd1cbb783eef" data-valmsg-replace="true"></span>
+    </div>
+
+</div>

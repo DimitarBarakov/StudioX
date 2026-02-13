@@ -1,0 +1,156 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+
+<section class="forms forms-offer ">
+    <div class="wrapper wrapper--xl">
+        <div class="forms-offer__box back-light-blue">
+            <div class="info-title">
+                @* <h1 class="title title--black title--l">Get an offer for our collaboration</h1> *@
+                <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("title", "title")">
+                </div>
+                <div class="info-title__subtitle container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("subtitle", "subtitle")">
+
+                </div>
+            </div>
+
+            <div class="forms-offer__wrap-info">
+
+                <ul class="forms-offer__list">
+
+                    <li class="forms-offer__item ">
+                        <a href="#">
+                            <div class="forms-offer__description">
+                                <span class="forms-offer__icon">
+
+                                    <svg class="icon icon--26">
+                                        <use xlink:href="/dist/web/images/icons/symbol-defs.svg#icon-radio"></use>
+                                    </svg>
+
+                                </span>
+                                <div class="forms-offer__wrap-text">
+                                    <span class="forms-offer__subtitle">I’m an employer</span>
+                                    <span class="forms-offer__text">I would like to have benefits for my employees</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="forms-offer__item is-active">
+                        <a href="#">
+                            <div class="forms-offer__description">
+                                <span class="forms-offer__icon">
+
+                                    <svg class="icon icon--26">
+                                        <use xlink:href="./web/images/icons/symbol-defs.svg#icon-radio-checked"></use>
+                                    </svg>
+
+                                </span>
+                                <div class="forms-offer__wrap-text">
+                                    <span class="forms-offer__subtitle">I’m an facility owner</span>
+                                    <span class="forms-offer__text">I would like to connect my facility to MultiSport</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="forms-offer__item ">
+                        <a href="#">
+                            <div class="forms-offer__description">
+                                <span class="forms-offer__icon">
+
+                                    <svg class="icon icon--26">
+                                        <use xlink:href="./web/images/icons/symbol-defs.svg#icon-radio"></use>
+                                    </svg>
+
+                                </span>
+                                <div class="forms-offer__wrap-text">
+                                    <span class="forms-offer__subtitle">I’m a facility user</span>
+                                    <span class="forms-offer__text">I would like to recommend a facility</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="forms-offer__item ">
+                        <a href="#">
+                            <div class="forms-offer__description">
+                                <span class="forms-offer__icon">
+
+                                    <svg class="icon icon--26">
+                                        <use xlink:href="./web/images/icons/symbol-defs.svg#icon-radio"></use>
+                                    </svg>
+
+                                </span>
+                                <div class="forms-offer__wrap-text">
+                                    <span class="forms-offer__subtitle">I’m an employee</span>
+                                    <span class="forms-offer__text">I would like to recommend my employer</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="forms-offer__box-form">
+                    <div class="forms-offer__wrap-form">
+                        <div id="umbraco_form_da8b729b6dda421d9dd949a41ff56295" class="umbraco-forms-form test umbraco-forms- container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("form", "form")">
+
+                            @* <form action="http://benefitsystems-local.bg/en/for-companies/" enctype="multipart/form-data" id="formdf8524add51a498ea31e7a42e8606b82" method="post">
+                                <input data-val="true" data-val-required="The FormId field is required." name="FormId" type="hidden" value="da8b729b-6dda-421d-9dd9-49a41ff56295">
+                                <input data-val="true" data-val-required="The FormName field is required." name="FormName" type="hidden" value="test">
+                                <input data-val="true" data-val-required="The RecordId field is required." name="RecordId" type="hidden" value="00000000-0000-0000-0000-000000000000">
+                                <input name="PreviousClicked" type="hidden" value="">
+                                <input name="Theme" type="hidden" value="">
+                                <input type="hidden" name="FormStep" value="0">
+                                <input type="hidden" name="RecordState" value="Q2ZESjhDWHpvNkdQVFE1Qm1vbmtuUlhuV1JhOXV0Q20wOEViNE0yVVBQQlo5eG9KcTRGV1NVY0V2MERlczVfdEpFQW43b0NZXzg5YUdjRlVOeXI2YllWUFJPeXJKMEM5ZVEtYUFQTEY2U2ZnLWs3elRCVHdVUUNDcU83dzhPN1BraHBnX2c=">
+
+                                <div class="umbraco-forms-page" id="63e9e3bf-b00d-4d75-b9c1-a1a3ec929728">
+
+                                    <fieldset class="umbraco-forms-fieldset" id="a436933b-c9aa-4882-be11-f8383f56f019">
+                                        <div class="row-fluid">
+
+                                            <div class="umbraco-forms-container col-md-12" >
+
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                    <fieldset class="umbraco-forms-fieldset" id="92432c2f-8ea8-49f4-fb32-65f5c42bedfb">
+                                        <div class="row-fluid">
+                                            <div class="umbraco-forms-container col-md-12">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div style="display: none" aria-hidden="true">
+                                        <input type="text" name="da8b729b6dda421d9dd949a41ff56295">
+                                    </div>
+                                    <div class="umbraco-forms-navigation row-fluid">
+
+                                        <div class="col-md-12">
+                                            <input type="submit" class="btn primary" value="Send" name="__next" data-form-navigate="next" data-umb="submit-forms-form">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CXzo6GPTQ5BmonknRXnWRZh8bnLrYA4ys0ivngGxNLabeoqzCr2dlC1FyBfVJUT4GJST9lIQC9osggboX5AgVgbbf-HgPmbUnopnkbWxnF5osgIw0P38dJgX7k3gs2S81f6oLLu4lD_8v9WhMm6Jec">
+                                <input name="ufprt" type="hidden" value="CfDJ8CXzo6GPTQ5BmonknRXnWRaTxJtWyoBsShFXFYcZJGB8zTs-PMIy7WTP_IWj6plunGRR3YQqxFXDowRll968qfDUHdFK-Zok3ymZ1HEE7KgmxuWaTCMgB0JZJCfNZ7-joR3jFZsYlhtZyDDZI_cB5VA">
+                            </form> *@ 
+                            <div class="umbraco-forms-form-config" style="display: none" data-id="da8b729b6dda421d9dd949a41ff56295" data-serialized-page-button-conditions="{}" data-serialized-fieldset-conditions="{}" data-serialized-field-conditions="{&quot;66fba940-6e9b-4d54-d19c-548429481b11&quot;:{&quot;id&quot;:&quot;dd5f93e3-0c10-4333-8e91-48b52a76da22&quot;,&quot;actionType&quot;:&quot;Show&quot;,&quot;logicType&quot;:&quot;All&quot;,&quot;rules&quot;:[{&quot;id&quot;:&quot;00000000-0000-0000-0000-000000000000&quot;,&quot;fieldsetId&quot;:&quot;a436933b-c9aa-4882-be11-f8383f56f019&quot;,&quot;field&quot;:&quot;88c0a6f9-05d2-4114-adab-dd1cbb783eef&quot;,&quot;operator&quot;:&quot;Is&quot;,&quot;value&quot;:&quot;\&quot;test\&quot;&quot;}]}}" data-serialized-fields-not-displayed="{}" data-trigger-conditions-check-on="change"></div>
+                            <script type="application/javascript" src="./For companies_files/umbracoforms.js.download" defer="defer"></script>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
