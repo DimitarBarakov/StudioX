@@ -1,0 +1,24 @@
+﻿@using WebApp.ViewModels.Card
+
+
+@model CardViewModel
+
+<section class="message-page">
+    <div class="wrapper wrapper--xl ">
+        <div class="message-page__content">
+            <div class="message-page__body">
+                <div class="message-page__wrap-img">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 70/70; ">
+                        <img loading="lazy" width="70" height="70" src="@Model.Image.Url" alt="picture">
+                    </picture>
+                </div>
+                <h1 class="message-page__title">@Model.CardTitle</h1>
+                <span class="message-page__subtitle">@Model.CardSubtitle</span>
+                <p class="message-page__text">
+                    @Model.CardText
+                </p>
+                <a class="button button--primary" href="@Model.Link">@Model.LinkText</a>
+            </div>
+        </div>
+    </div>
+</section>

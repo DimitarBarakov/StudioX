@@ -1,0 +1,36 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+<ul class="card-list__list">
+    @foreach(var item in Model.Items)
+    {
+        var title = item.GetValue<string>("Title");
+        var summary = item.GetValue<string>("Summary");
+        var image = Model.GetFirstRelatedMedia(item, "Image");
+        var link = item.GetValue<string>("Link");
+        var linkText = item.GetValue<string>("LinkText");
+
+            <li class="card-list__item">
+                <a href="@link">
+                    <div class="card-list__box">
+                        <div class="card-list__wrap-img">
+                            <picture class="aspect-ratio" style="--aspect-ratio: 460/259; --aspect-ratio-s: 335/215; ">
+                                <!-- size 460/259 -->
+
+                                <img loading="lazy" width="460" height="259" src="@image.Url" alt="picture">
+
+                            </picture>
+                        </div>
+                        <div class="card-list__info">
+                            <h2 class="card-list__subtitle">@title</h2>
+                            <span class="card-list__text">@summary</span>
+                            <span class="link">@linkText</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+    }
+</ul>

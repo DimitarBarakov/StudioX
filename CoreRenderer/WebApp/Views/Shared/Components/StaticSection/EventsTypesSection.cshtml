@@ -1,0 +1,18 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@using Progress.Sitefinity.AspNetCore.ViewComponents
+@using WebApp.ViewModels.StaticSection
+
+@model StaticSectionViewModel
+
+<section class="card-list mb-197 ">
+    <div class="wrapper">
+        <div class="title title--black title--ml container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("Title", "Title")"></div>
+
+        <div class="card-list__description container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("subtitle", "subtitle")"></div>
+
+        <div class="container" data-sfcontainer container-context="@this.Model.Context.ContainerContext("EventsList", "EventsList")"></div>
+        
+    </div>
+</section>

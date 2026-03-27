@@ -1,0 +1,92 @@
+﻿@using Progress.Sitefinity.AspNetCore.Widgets.Models.Image
+@using Progress.Sitefinity.RestSdk.Dto;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@model Progress.Sitefinity.AspNetCore.Widgets.Models.ContentList.ContentListViewModel
+
+<ul class="card__list swiper-wrapper">
+    @foreach(var item in Model.Items)
+    {
+        var title = item.GetValue<string>("Title");
+        var content = item.GetValue<string>("Content");
+        var image = Model.GetFirstRelatedMedia(item, "Image");
+
+        <li class="card__item swiper-slide">
+            <div class="card__item-wrap">
+                <div class="card__info">
+                    <div class="card__wrap-img">
+                        <picture class="aspect-ratio" style="--aspect-ratio: 87/87; ">
+                            <img loading="lazy" width="87" height="87" src="@image.Url" alt="picture">
+                        </picture>
+                    </div>
+                    <span class="card__subtitle">@title</span>
+
+                </div>
+                <p class="card__text">@content</p>
+            </div>
+        </li>
+    }
+</ul>
+@* <ul class="card__list swiper-wrapper">
+
+    <li class="card__item swiper-slide">
+        <div class="card__item-wrap">
+            <div class="card__info">
+                <div class="card__wrap-img">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 87/87; ">
+                        <img loading="lazy" width="87" height="87" src="web/images/events-icon01.svg" alt="picture">
+                    </picture>
+                </div>
+                <span class="card__subtitle">Exerts</span>
+
+            </div>
+            <p class="card__text">We are experts in the field of exercise and health. We have a professional education and cooperate with many other experts.</p>
+        </div>
+    </li>
+
+    <li class="card__item swiper-slide">
+        <div class="card__item-wrap">
+            <div class="card__info">
+                <div class="card__wrap-img">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 87/87; ">
+                        <img loading="lazy" width="87" height="87" src="web/images/events-icon02.svg" alt="picture">
+                    </picture>
+                </div>
+                <span class="card__subtitle">Recommendations</span>
+
+            </div>
+            <p class="card__text">We are always happy to meet you personally and discuss your wishes and ideas. Based on our experience, we will recommend the most suitable for your employees.</p>
+        </div>
+    </li>
+
+    <li class="card__item swiper-slide">
+        <div class="card__item-wrap">
+            <div class="card__info">
+                <div class="card__wrap-img">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 87/87; ">
+                        <img loading="lazy" width="87" height="87" src="web/images/events-icon03.svg" alt="picture">
+                    </picture>
+                </div>
+                <span class="card__subtitle">Support</span>
+
+            </div>
+            <p class="card__text">We will completely arrange the entire event for you, including sports equipment , support for communication with employees &amp; photo documentation of the event.</p>
+        </div>
+    </li>
+
+    <li class="card__item swiper-slide">
+        <div class="card__item-wrap">
+            <div class="card__info">
+                <div class="card__wrap-img">
+                    <picture class="aspect-ratio" style="--aspect-ratio: 87/87; ">
+                        <img loading="lazy" width="87" height="87" src="web/images/events-icon04.svg" alt="picture">
+                    </picture>
+                </div>
+                <span class="card__subtitle">Plans</span>
+
+            </div>
+            <p class="card__text">We will ensure all planning, organization, on-site implementation and subsequent outputs from the event. You don`t have to worry about events anymore</p>
+        </div>
+    </li>
+
+</ul> *@

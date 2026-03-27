@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
+using Progress.Sitefinity.AspNetCore.ViewComponents.AttributeConfigurator.Attributes;
 
 namespace ViewComponents.Title
 {
@@ -23,7 +24,7 @@ namespace ViewComponents.Title
                 throw new ArgumentNullException(nameof(context));
             }
 
-            return this.View(context.Entity);
+            return this.View(context.Entity.View, context.Entity);
         }
     }
 
@@ -39,5 +40,8 @@ namespace ViewComponents.Title
         public string Title { get; set; }
         public string Alignment { get; set; }
         public string Color { get; set; }
+
+        [ViewSelector]
+        public string View { get; set; }
     }
 }

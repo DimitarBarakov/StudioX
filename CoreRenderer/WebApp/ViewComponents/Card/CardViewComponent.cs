@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using WebApp.ViewModels.Card;
 
@@ -39,6 +40,12 @@ namespace ViewComponents.Card
         /// <returns></returns>
         public async Task<IViewComponentResult> InvokeAsync(IViewComponentContext<CardEntity> context)
         {
+            //var asd = restClient.GetItems<NewsDto>(x=>x.Title =="asd", new GetAllArgs()
+            //{
+            //    Fields = { "Title" },
+
+            //});
+
             CardViewModel model = new CardViewModel();
             if (context == null)
             {
@@ -100,7 +107,6 @@ namespace ViewComponents.Card
 
         [ContentSection(CardSectionName)]
         [DisplayName("Card Title")]
-        
         public string CardTitle { get; set; }
 
         [ContentSection(CardSectionName)]

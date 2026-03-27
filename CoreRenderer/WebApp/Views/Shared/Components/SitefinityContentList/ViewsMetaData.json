@@ -135,5 +135,41 @@
       "fieldTitle": "LinkText",
       "fieldType": "ShortText"
     }
+  ],
+  "EventsTypesList": [
+    {
+      "fieldTitle": "Title",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Summary",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Image",
+      "fieldType": "RelatedImage"
+    },
+    {
+      "fieldTitle": "Link",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "LinkText",
+      "fieldType": "ShortText"
+    }
+  ],
+  "EducateAndConnectList": [
+    {
+      "fieldTitle": "Title",
+      "fieldType": "ShortText"
+    },
+    {
+      "fieldTitle": "Content",
+      "fieldType": "Text"
+    },
+    {
+      "fieldTitle": "Image",
+      "fieldType": "RelatedImage"
+    }
   ]
 }
